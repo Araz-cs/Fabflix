@@ -1,0 +1,23 @@
+/*body h1 {*/
+/*    padding-left: 36%;*/
+/*    padding-right: 36%;*/
+/*    !*display: flex;*!*/
+/*    !*justify-content: center;*!*/
+/*    !*align-items: center;*!*/
+/*}*/
+h1{
+    text-align: center;
+}
+body{
+    padding-left: 16%;
+    padding-right: 16%;
+    /*display: flex;*/
+    /*justify-content: center;*/
+    /*align-items: center;*/
+}
+/*h1 {*/
+/*    font-weight: 400;*/
+/*    text-transform: uppercase;*/
+/*    font-size: 28px;*/
+/*}*/
+
