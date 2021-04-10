@@ -103,22 +103,22 @@ public class movieList extends HttpServlet {
                 jsonObject.addProperty("sname", sname);
                 jsonObject.addProperty("rating", rating);
 
-                ArrayList<String> arrList1 = new ArrayList<>(Arrays.asList(sid.split(",")));
-                ArrayList<String> arrList2 = new ArrayList<>(Arrays.asList(sname.split(",")));
+                ArrayList<String> arrSID = new ArrayList<>(Arrays.asList(sid.split(",")));
+                ArrayList<String> arrSNary = new ArrayList<>(Arrays.asList(sname.split(",")));
 
                 try {
-                    jsonObject.addProperty("sid1", arrList1.get(0));
-                    jsonObject.addProperty("sid2", arrList1.get(1));
-                    jsonObject.addProperty("sid3", arrList1.get(2));
+                    jsonObject.addProperty("0sid", arrSID.get(0));
+                    jsonObject.addProperty("1sid", arrSID.get(1));
+                    jsonObject.addProperty("2sid", arrSID.get(2));
                 }
                 catch (Exception ignored)
                 {
 
                 }
                 try {
-                    jsonObject.addProperty("sn1", arrList2.get(0));
-                    jsonObject.addProperty("sn2", arrList2.get(1));
-                    jsonObject.addProperty("sn3", arrList2.get(2));
+                    jsonObject.addProperty("0n", arrSNary.get(0));
+                    jsonObject.addProperty("1n", arrSNary.get(1));
+                    jsonObject.addProperty("2n", arrSNary.get(2));
                 }
                 catch (Exception ignored)
                 {
