@@ -70,7 +70,7 @@ public class movieList extends HttpServlet {
                     "ON sm.id = s.id \n" +
                     "LEFT JOIN ratings r\n" +
                     "ON r.movieID = m.movieID \n" +
-                    "group by m.title\n" +
+                    "group by m.movieID\n" +
                     "ORDER BY rating DESC\n" +
                     "limit 0,20 ";
 
