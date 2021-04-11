@@ -8,6 +8,6 @@
               driverClassName="com.mysql.jdbc.Driver"
               type="javax.sql.DataSource"
               username="anon"
-              password="Hovsep2001!"
+              password="Proj1.sql"
               url="jdbc:mysql://localhost:3306/moviedb"/>
 </Context>
