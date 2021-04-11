@@ -5,6 +5,12 @@ Instructions
 Download the repository or clone:
 https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-57.git
 
+
+AWS MYSQL USER INFO:
+username = mytestuser
+password = My6$Password
+
+AWS 
 SSH into AWS instance
 Startup tomcat
 Access the tomcat
