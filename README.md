@@ -1,5 +1,5 @@
-Youtube
-
+Youtube:
+https://tinyurl.com/cs122bHandA
 
 Instructions
 Download the repository or clone:
@@ -10,11 +10,11 @@ Startup tomcat
 Access the tomcat
 
 
-Inside the repo with the pom.xml file build the warby using 
+Inside the repo with the pom.xml file build the warby using: 
 mvn package
 
 
-Then copy the war file
+Then copy the war file:
 cp ./target/*.war /var/lib/tomcat9/webapps/
 
 Refresh tomcatserver and it should be up.
