@@ -51,6 +51,6 @@ sudo cp ./target/*.war /var/lib/tomcat9/webapps/
 * Refresh the application manager and click on Project1 to deploy.
 
 
-## Contributing
+## Contribution
 * Araz - Worked on the movieList, singleMovie, and singleStar pages(servlet,js,jdbc,java) and (html/css,MYSQL) files.  
 * Harman- Worked on the movieList, singleMovie, and singleStar pages(servlet,js,jdbc,java) and (html/css,MYSQL) files. 
