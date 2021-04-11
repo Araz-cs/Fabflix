@@ -1,48 +1,105 @@
-Youtube:
-https://tinyurl.com/cs122bHandA
+# Title / Repository Name
 
-Instructions
-Download the repository or clone:
-https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-57.git
+## About / Synopsis
 
+* What is it, what does it do / Abstract
+* Project status: working/prototype
+* Nuxeo Support
 
-AWS MYSQL USER INFO:
+See real examples:
 
+* <https://github.com/nuxeo/nuxeo/blob/master/README.md>
+* <https://github.com/nuxeo/nuxeo-drive/blob/master/README.md>
+* <https://github.com/nuxeo/nuxeo-sdk-ios/blob/master/README.md>
 
-username = mytestuser
+## Table of contents
 
+Use for instance <https://github.com/ekalinin/github-markdown-toc>:
 
-password = My6$Password
+> * [Title / Repository Name](#title--repository-name)
+>   * [About / Synopsis](#about--synopsis)
+>   * [Table of contents](#table-of-contents)
+>   * [Installation](#installation)
+>   * [Usage](#usage)
+>     * [Screenshots](#screenshots)
+>     * [Features](#features)
+>   * [Code](#code)
+>     * [Content](#content)
+>     * [Requirements](#requirements)
+>     * [Limitations](#limitations)
+>     * [Build](#build)
+>     * [Deploy (how to install build product)](#deploy-how-to-install-build-product)
+>   * [Resources (Documentation and other links)](#resources-documentation-and-other-links)
+>   * [Contributing / Reporting issues](#contributing--reporting-issues)
+>   * [License](#license)
+>   * [About Nuxeo](#about-nuxeo)
 
+## Installation
 
-AWS 
-SSH into AWS instance
-Startup tomcat
-Access the tomcat
+Sample:
 
+* From the Nuxeo Marketplace: install [the Sample Nuxeo Package](https://connect.nuxeo.com/nuxeo/site/marketplace/package/nuxeo-sample).
+* From the command line: `nuxeoctl mp-install nuxeo-sample`
 
-Inside the repo with the pom.xml file build the warby using: 
-mvn package
+## Usage
 
+### Screenshots
 
-Then copy the war file:
-cp ./target/*.war /var/lib/tomcat9/webapps/
+### Features
 
-Refresh tomcatserver and it should be up.
-Click the project link and the website should be there.
+## Code
 
+[![Build Status](https://qa.nuxeo.org/jenkins/buildStatus/icon?job=/nuxeo/addons_nuxeo-sample-project-master)](https://qa.nuxeo.org/jenkins/job/nuxeo/job/addons_nuxeo-sample-project-master/)
 
+### Content
 
+Description, sub-modules organization...
 
-Contributions
-Araz - Single Movie query.Worked on movie page, single movie page, single star page(servlet,js,html). Implementing the jump functionality. CSS
-Harman- Movielist query, Single Star query.Worked on movie page, single movie page, single star page(servlet,js,html).
+### Requirements
 
+See [CORG/Compiling Nuxeo from sources](http://doc.nuxeo.com/x/xION)
 
+Sample: <https://github.com/nuxeo/nuxeo/blob/master/nuxeo-distribution/README.md>
 
+### Limitations
 
-Sample of the page ran on local host
-https://gyazo.com/52835bc133ded65f7d924ed5e3306be2
-https://gyazo.com/ab5724ce1df3be6825ad0c51382d4a09
-https://gyazo.com/850cba1900ccd4cf273825fe1b46a384
-https://gyazo.com/62c77cfb99c4d2cee0ffbf4d43546092
+Sample: <https://github.com/nuxeo-archives/nuxeo-features/tree/master/nuxeo-elasticsearch>
+
+### Build
+
+    mvn clean install
+
+Build options:
+
+* ...
+
+### Deploy (how to install build product)
+
+Direct to MP package if any. Otherwise provide steps to deploy on Nuxeo Platform:
+
+ > Copy the built artifacts into `$NUXEO_HOME/templates/custom/bundles/` and activate the `custom` template.
+
+## Resources (Documentation and other links)
+
+## Contributing / Reporting issues
+
+Link to JIRA component (or project if there is no component for that project). Samples:
+
+* [Link to component](https://jira.nuxeo.com/issues/?jql=project%20%3D%20NXP%20AND%20component%20%3D%20Elasticsearch%20AND%20Status%20!%3D%20%22Resolved%22%20ORDER%20BY%20updated%20DESC%2C%20priority%20DESC%2C%20created%20ASC)
+* [Link to project](https://jira.nuxeo.com/secure/CreateIssue!default.jspa?project=NXP)
+
+## License
+
+[Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0.html)
+
+## About Nuxeo
+
+Nuxeo Platform is an open source Content Services platform, written in Java. Data can be stored in both SQL & NoSQL databases.
+
+The development of the Nuxeo Platform is mostly done by Nuxeo employees with an open development model.
+
+The source code, documentation, roadmap, issue tracker, testing, benchmarks are all public.
+
+Typically, Nuxeo users build different types of information management solutions for [document management](https://www.nuxeo.com/solutions/document-management/), [case management](https://www.nuxeo.com/solutions/case-management/), and [digital asset management](https://www.nuxeo.com/solutions/dam-digital-asset-management/), use cases. It uses schema-flexible metadata & content models that allows content to be repurposed to fulfill future use cases.
+
+More information is available at [www.nuxeo.com](https://www.nuxeo.com).
