@@ -45,7 +45,7 @@ public class LoginServlet extends HttpServlet {
             Connection conn = dataSource.getConnection();
 
             //String query = "SELECT * FROM Customers c WHERE c.email="+username+" AND c.cPassword="+password ;
-            String query = "SELECT * FROM Customers c WHERE c.email=? AND c.cPassword=?";
+            String query = "SELECT * FROM customers c WHERE c.email=? AND c.cPassword=?";
 
             PreparedStatement statement = conn.prepareStatement(query);
 

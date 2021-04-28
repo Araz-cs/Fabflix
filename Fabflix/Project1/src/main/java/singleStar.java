@@ -56,7 +56,7 @@ public class singleStar extends HttpServlet {
             // Get a connection from dataSource
 
             // Construct a query with parameter represented by "?"
-            String query = "SELECT m.movieID as mID, m.yearz as years, sm.id as smID, distinct s.name as name , IFNULL(s.birthyear, \"N/A\") as dob, m.title as title\n" +
+            String query = "SELECT m.movieID as mID, m.yearz as years, sm.id as smID, s.name as name , IFNULL(s.birthyear, \"N/A\") as dob, m.title as title\n" +
                     "from  stars as s\n" +
                     "INNER JOIN stars_in_movies as sm\n" +
                     "ON s.id = sm.id and s.id =?\n" +
