@@ -88,3 +88,28 @@ CREATE TABLE ratings(
     PRIMARY KEY(movieID),
 	FOREIGN KEY(movieID) REFERENCES movies(movieID)
 );
+
+DROP VIEW IF EXISTS movielist;
+CREATE VIEW movielist AS
+SELECT m.movieID , m.title, m.director, GROUP_CONCAT(distinct g.gNames ORDER BY g.gNames SEPARATOR ', ' ) as genre , m.yearz, FORMAT(IFNULL(rating, 0), 1) as rating,
+    GROUP_CONCAT(distinct sm.id SEPARATOR ", " ) as sid, GROUP_CONCAT(distinct s.name SEPARATOR ", " ) as star
+    FROM movies as m, genres_in_movies as gm, stars_in_movies as sm 
+    JOIN ratings as r
+	JOIN genres as g
+    JOIN stars as s
+	WHERE r.movieID = gm.movieID AND sm.movieID = r.movieID
+    AND gm.gID = g.gID AND sm.id = s.id AND  m.movieID = r.movieId
+    group by movieID;
+    
+    
+DROP VIEW IF EXISTS count_Stars_in_movies;
+CREATE VIEW count_Stars_in_movies AS
+SELECT s.name as name, s.id as id, COUNT(sim.id) as count
+FROM stars AS s JOIN stars_in_movies AS sim
+WHERE s.id = sim.id
+GROUP BY s.id
+ORDER BY COUNT(sim.id) DESC, s.name ASC;
+
+
+
+
