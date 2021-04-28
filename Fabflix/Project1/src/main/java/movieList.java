@@ -10,10 +10,12 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.sql.Connection;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.Statement;
 import java.util.ArrayList;
@@ -41,59 +43,103 @@ public class movieList extends HttpServlet {
             throws IOException {
 
         response.setContentType("application/json"); // Response mime type
-
-        // Retrieve parameter id from url request.
-
-//        String id = request.getParameter("id");
-
-        // Output stream to STDOUT
+        HttpSession session = request.getSession();
         PrintWriter out = response.getWriter();
 
-        try (Connection conn = dataSource.getConnection()) {
-            // Get a connection from dataSource
-            Statement statement = conn.createStatement();
-            // Construct a query with parameter represented by "?"
-            String query = "SELECT m.movieID as mid, m.title as title, m.yearz as year,\n" +
-                    "m.director as director,\n" +
-                    "substring_index(group_concat(distinct g.gNames SEPARATOR ', '), ', ', 3) as genres,\n" +
-                    "substring_index(group_concat(s.id SEPARATOR ','), ',', 3) as sid,\n" +
-                    "substring_index(group_concat(s.name SEPARATOR ', '), ', ', 3) as stars ,\n" +
-                    "r.rating\n" +
-                    "FROM movies m\n" +
-                    "LEFT JOIN genres_in_movies gm\n" +
-                    "ON gm.movieID = m.movieID \n" +
-                    "LEFT JOIN genres g\n" +
-                    "ON g.gID = gm.gID\n" +
-                    "LEFT JOIN stars_in_movies sm\n" +
-                    "ON sm.movieID= m.movieID\n" +
-                    "LEFT JOIN stars s\n" +
-                    "ON sm.id = s.id \n" +
-                    "LEFT JOIN ratings r\n" +
-                    "ON r.movieID = m.movieID \n" +
-                    "group by m.movieID\n" +
-                    "ORDER BY rating DESC\n" +
-                    "limit 0,20 ";
+        String title = request.getParameter("title");
+        String year = request.getParameter("year");
+        String page = request.getParameter("page");
+        String director = request.getParameter("director");
+        String star = request.getParameter("star");
+        String genre = request.getParameter("genre");
+        String countStr = request.getParameter("count");
+        String s1 = sortOrder(request.getParameter("s1"));
+        String s2 = sortOrder(request.getParameter("s2"));
 
-            // Declare our statement
-            ResultSet rs = statement.executeQuery(query);
+        String curURL = "movieList.html?title=" + title + "&director=" +
+                director + "&star" + star + "&genre=" +
+                genre + "&year=" + year + "&page="  + page + "&count=" +
+                countStr + "&s1=" + request.getParameter("s1") +
+                "&s2=" + request.getParameter("s2");
+
+        session.setAttribute("curURL", curURL);
+
+        try (Connection conn = dataSource.getConnection())
+        {
+            String TQ = "";
+
+            if(year.isEmpty())
+            {
+                year = "%%";
+            }
+
+            if(title.equals("@"))
+            {
+                TQ = "regexp '^[^a-z0-9A-Z]'";
+            }
+            else if(title.indexOf('<') != -1)
+            {
+                title = title.replace('<', '%');
+                TQ = "LIKE ?";
+            }
+            else
+            {
+                title = "%" + title + "%";
+                TQ = "LIKE ?";
+            }
+            int offset = (Integer.parseInt(page) - 1) * Integer.parseInt(countStr);
+            String query = "SELECT *, found_rows() AS 'count' " +
+                    "FROM `movielist`" +
+                    "WHERE `genre` LIKE ? " +
+                    "AND `title` " + TQ +" " +
+                    "AND `director` LIKE ? " +
+                    "AND `star` LIKE ? " +
+                    "AND `yearz` LIKE ? " +
+                    "ORDER BY " + s1 +  ", " + s2 + " " +
+                    "LIMIT " + Integer.parseInt(countStr) +" " +
+                    "OFFSET " + offset;
+            System.out.println("offset:"+offset);
+            PreparedStatement statement = conn.prepareStatement(query);
+
+
+            if(title.equals("@"))
+            {
+                statement.setString(1, "%" + genre + "%");
+                statement.setString(2, "%" + director + "%");
+                statement.setString(3, "%" + star + "%");
+                statement.setString(4,  year );
+            }
+            else
+            {
+                statement.setString(1, "%" + genre + "%");
+                statement.setString( 2, title);
+                statement.setString(3 , "%" + director + "%");
+                statement.setString(4 , "%" + star + "%");
+                statement.setString(5 ,  year );
+            };
+
+            ResultSet rs = statement.executeQuery();
 
             JsonArray jsonArray = new JsonArray();
 
+            int flag = 1;
+
             // Iterate through each row of rs
-            while (rs.next()) {
+            while (rs.next())
+            {
 
-                String mid = rs.getString("mid");
+                String CountQ = "";
+                String mid = rs.getString("movieID");
                 String mtitle = rs.getString("title");
-                int myear = rs.getInt("year");
-
+                int myear = rs.getInt("yearz");
                 String mdirector = rs.getString("director");
-                String gname = rs.getString("genres");
+                String gname = rs.getString("genre");
                 String sid = rs.getString("sid");
-                String sname = rs.getString("stars");
+                String sname = rs.getString("star");
                 float rating = rs.getFloat("rating");
-                // Create a JsonObject based on the data we retrieve from rs
 
                 JsonObject jsonObject = new JsonObject();
+
                 jsonObject.addProperty("mid", mid);
                 jsonObject.addProperty("mtitle", mtitle);
                 jsonObject.addProperty("myear", myear);
@@ -103,33 +149,21 @@ public class movieList extends HttpServlet {
                 jsonObject.addProperty("sname", sname);
                 jsonObject.addProperty("rating", rating);
 
-                ArrayList<String> arrSID = new ArrayList<>(Arrays.asList(sid.split(",")));
-                ArrayList<String> arrSNary = new ArrayList<>(Arrays.asList(sname.split(",")));
-
-                try {
-                    jsonObject.addProperty("0sid", arrSID.get(0));
-                    jsonObject.addProperty("1sid", arrSID.get(1));
-                    jsonObject.addProperty("2sid", arrSID.get(2));
-                }
-                catch (Exception ignored)
+                if (flag == 1)
                 {
 
+                    CountQ = rs.getString("count");
+                    JsonObject countObj = new JsonObject();
+                    countObj.addProperty("CountQ", CountQ);
+                    jsonArray.add(countObj);
+                    flag = 0;
                 }
-                try {
-                    jsonObject.addProperty("0n", arrSNary.get(0));
-                    jsonObject.addProperty("1n", arrSNary.get(1));
-                    jsonObject.addProperty("2n", arrSNary.get(2));
-                }
-                catch (Exception ignored)
-                {
 
-                }
                 jsonArray.add(jsonObject);
             }
 
-            rs.close();
             statement.close();
-
+            conn.close();
             // write JSON string to output
             out.write(jsonArray.toString());
             // set response status to 200 (OK)
@@ -145,8 +179,18 @@ public class movieList extends HttpServlet {
             response.setStatus(500);
         }
         out.close();
-
     }
-
+    public String sortOrder(String sortOrder)
+    {
+        if(sortOrder.equals("rASC"))
+            sortOrder = "rating ASC";
+        else if(sortOrder.equals("tASC"))
+            sortOrder = "title ASC";
+        else if(sortOrder.equals("rDESC"))
+            sortOrder = "rating DESC";
+        else if(sortOrder.equals("tDESC"))
+            sortOrder = "title DESC";
+        return sortOrder;
+    }
 }
 

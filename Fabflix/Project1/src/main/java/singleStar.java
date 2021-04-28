@@ -10,6 +10,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import javax.sql.DataSource;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -44,6 +45,9 @@ public class singleStar extends HttpServlet {
         // Retrieve parameter id from url request.
         String id = request.getParameter("id");
 
+        HttpSession session = request.getSession();
+
+        String curURL = session.getAttribute("curURL") + "";
         // Output stream to STDOUT
         PrintWriter out = response.getWriter();
 
@@ -52,13 +56,14 @@ public class singleStar extends HttpServlet {
             // Get a connection from dataSource
 
             // Construct a query with parameter represented by "?"
-            String query = "SELECT GROUP_CONCAT(m.movieID) as mID, sm.id as smID, s.name as name , IFNULL(s.birthyear, \"N/A\") as dob, GROUP_CONCAT(m.title) as title\n" +
+            String query = "SELECT m.movieID as mID, m.yearz as years, sm.id as smID, distinct s.name as name , IFNULL(s.birthyear, \"N/A\") as dob, m.title as title\n" +
                     "from  stars as s\n" +
                     "INNER JOIN stars_in_movies as sm\n" +
                     "ON s.id = sm.id and s.id =?\n" +
                     "INNER JOIN movies as m\n" +
                     "ON m.movieID = sm.movieID \n" +
-                    "group by s.name";
+                    "group by m.movieID\n" +
+                    "ORDER BY years DESC, title ASC;";
 
             // Declare our statement
             PreparedStatement statement = conn.prepareStatement(query);
@@ -72,11 +77,15 @@ public class singleStar extends HttpServlet {
 
             JsonArray jsonArray = new JsonArray();
 
+            JsonObject newObject = new JsonObject();
+            newObject.addProperty("curURL", curURL);
+            jsonArray.add(newObject);
+
             // Iterate through each row of rs
             while (rs.next()) {
 
                 String mID = rs.getString("mID");
-
+                String years = rs.getString("years");
                 String Title = rs.getString("title");
                 String dob = rs.getString("dob");
                 String name = rs.getString("name");
@@ -87,6 +96,7 @@ public class singleStar extends HttpServlet {
 
                 JsonObject jsonObject = new JsonObject();
                 jsonObject.addProperty("mID", mID);
+                jsonObject.addProperty("years", years);
                 jsonObject.addProperty("Title", Title);
                 jsonObject.addProperty("dob", dob);
                 jsonObject.addProperty("smID", smID);
@@ -104,12 +114,12 @@ public class singleStar extends HttpServlet {
             }
             rs.close();
             statement.close();
+            conn.close();
 
             // write JSON string to output
             out.write(jsonArray.toString());
             // set response status to 200 (OK)
             response.setStatus(200);
-
         } catch (Exception e) {
             // write error message JSON object to output
             JsonObject jsonObject = new JsonObject();

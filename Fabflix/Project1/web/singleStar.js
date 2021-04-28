@@ -38,6 +38,13 @@ function getParameterByName(target) {
 
 function handleResult(resultData) {
 
+    // let addButton = jQuery("#shopButton");
+    // addButton.append('<input class = "btn btn-secondary" type="button" onClick="handleCart(\'' + resultData[0]["mID"] + '\', \'' + resultData[1]['Title']+ '\')" value = "Add to Cart" />');
+
+    let URLnow = resultData[0]["curURL"];
+    let jumpFunc = jQuery("#jump_func");
+    jumpFunc.append('<a class="nav-link" href = "' + URLnow + '">Movie List</a>')
+
     console.log("handleResult: populating star info from resultData");
 
     // populate the star info h3
@@ -45,8 +52,8 @@ function handleResult(resultData) {
     let starInfoElement = jQuery("#star_info");
 
     // append two html <p> created to the h3 body, which will refresh the page
-    starInfoElement.append("<p> Name: " + resultData[0]["name"] + "</p>" +
-        "<p>DOB: " + resultData[0]["dob"] + "</p>");
+    starInfoElement.append("<p> Name: " + resultData[1]["name"] + "</p>" +
+        "<p>DOB: " + resultData[1]["dob"] + "</p>");
 
 
     // console.log("handleResult: populating movie table from resultData");
@@ -56,17 +63,16 @@ function handleResult(resultData) {
     let movieTableBodyElement = jQuery("#star_table_body");
 
     // Concatenate the html tags with resultData jsonObject to create table rows
-    var listID = resultData[0].mID.split(",");
-    var listName = resultData[0].Title.split(",");
-    for (let i = 0; i < Math.min( listID.length); i++) {
+    // var listID = resultData[0].mID.split(",");
+    // var listName = resultData[0].Title.split(",");
+
+    for (let i = 1; i <resultData.length; i++) {
         let rowHTML = "";
         rowHTML += "<tr>";
         rowHTML += "<th>" +
-            // Add a link to singleMovie.html with id passed with GET url parameter
-            '<a href="singleMovie.html?id=' + listID[i] + '">'
-            + listName[i] + // display movie for the link text
-            '</a>' +
-            "</th>";
+            '<a href="singleMovie.html?id=' + resultData[i]["mID"] + '">'
+            + resultData[i]["Title"] + '</a>' + "</th>";
+        rowHTML += "<th>" + resultData[i]["years"] + "</th>";
         rowHTML += "</tr>";
 
         // Append the row created to the table body, which will refresh the page

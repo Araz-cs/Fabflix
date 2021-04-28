@@ -1,20 +1,3 @@
-/**
- * This example is following frontend and backend separation.
- *
- * Before this .js is loaded, the html skeleton is created.
- *
- * This .js performs three steps:
- *      1. Get parameter from request URL so it know which id to look for
- *      2. Use jQuery to talk to backend API to get the json data.
- *      3. Populate the data to correct html elements.
- */
-
-
-/**
- * Retrieve parameter from request URL, matching by parameter name
- * @param target String
- * @returns {*}
- */
 function getParameterByName(target) {
     // Get request URL
     let url = window.location.href;
@@ -31,42 +14,41 @@ function getParameterByName(target) {
     return decodeURIComponent(results[2].replace(/\+/g, " "));
 }
 
-/**
- * Handles the data returned by the API, read the jsonObject and populate data into html elements
- * @param resultData jsonObject
- */
 
 function handleResult(resultData) {
 
+    let addButton = jQuery("#shopButton");
+    addButton.append('<input class = "btn btn-secondary" type="button" onClick="shoppingCart(\'' + resultData[0]["mID"] + '\', \'' + resultData[0]['title']+ '\')" value = "Add to Cart" />');
+
+    let URLnow = resultData[0]["curURL"];
+    let jumpFunc = jQuery("#jump_func");
+    jumpFunc.append('<a class="nav-link" href = "' + URLnow + '">Movie List</a>')
+
     console.log("handleResult: populating star info from resultData");
 
-    // populate the star info h3
-    // find the empty h3 body by id "star_info"
+
     let starInfoElement = jQuery("#movie_info");
 
-    // append two html <p> created to the h3 body, which will refresh the page
-    starInfoElement.append("<p>" + resultData[0]["title"] + "</p>" +
-        "<p>Directors: " + resultData[0]["director"] + "</p>" +
-        "<p>Genre: " + resultData[0]["genres"] + "</p>" +
-        "<p>Year: " + resultData[0]["year"] + "</p>"+
-        "<p>Rating: " + resultData[0]["rating"] + "</p>");
+    starInfoElement.append("<p>" + resultData[1]["title"] + "</p>" +
+        "<p>Directors: " + resultData[1]["director"] + "</p>" +
+        "<p>Genre: " + resultData[1]["genres"] + "</p>" +
+        "<p>Year: " + resultData[1]["year"] + "</p>"+
+        "<p>Rating: " + resultData[1]["rating"] + "</p>");
 
     console.log("handleResult: populating movie table from resultData");
 
-    // Populate the star table
-    // Find the empty table body by id "movie_table_body"
+
     let movieTableBodyElement = jQuery("#movie_table_body");
 
     // Concatenate the html tags with resultData jsonObject to create table rows
-    var listID = resultData[0].smID.split(",");
-    var listName = resultData[0].stars.split(",");
-    for (let i = 0; i < Math.min( listID.length); i++) {
+
+    for (let i = 1; i < resultData.length; i++) {
         let rowHTML = "";
         rowHTML += "<tr>";
         rowHTML += "<th>" +
             // Add a link to singleMovie.html with id passed with GET url parameter
-            '<a href="singleStar.html?id=' + listID[i] + '">'
-            + listName[i] + // display movie for the link text
+            '<a href="singleStar.html?id=' + resultData[i]['smID'] + '">'
+            + resultData[i]['stars'] + // display movie for the link text
             '</a>' +
             "</th>";
         rowHTML += "</tr>";
@@ -76,9 +58,15 @@ function handleResult(resultData) {
     }
 }
 
-/**
- * Once this .js is loaded, following scripts will be executed by the browser\
- */
+
+function shoppingCart(mid, title)
+{
+    alert('Added ' + title + " to your cart.");
+    $.ajax("api/shoppingCart", {
+        method: "POST",
+        data:"movieID=" + mid + "&title=" + title +"&cmd=add"
+    });
+}
 
 // Get id from URL
 let movieId = getParameterByName('id');
