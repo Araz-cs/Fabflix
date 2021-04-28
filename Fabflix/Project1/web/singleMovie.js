@@ -18,7 +18,7 @@ function getParameterByName(target) {
 function handleResult(resultData) {
 
     let addButton = jQuery("#shopButton");
-    addButton.append('<input class = "btn btn-secondary" type="button" onClick="shoppingCart(\'' + resultData[0]["mID"] + '\', \'' + resultData[0]['title']+ '\')" value = "Add to Cart" />');
+    addButton.append('<input class = "btn btn-secondary" type="button" onClick="shoppingCart(\'' + resultData[1]["mID"] + '\', \'' + resultData[1]['title']+ '\')" value = "Add to Cart" />');
 
     let URLnow = resultData[0]["curURL"];
     let jumpFunc = jQuery("#jump_func");
