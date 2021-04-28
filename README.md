@@ -1,5 +1,4 @@
-#  [Fabflix website](ec2-3-143-237-60.us-east-2.compute.amazonaws.com
-:8080/Project1/)
+#  [Fabflix website](http://ec2-3-143-237-60.us-east-2.compute.amazonaws.com:8080/Project1/login.html)
 
 * Implementation of the Movie List page, Single Star page, and Single Movie page for the FabFlix web application.
 * Project status: Done
