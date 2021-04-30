@@ -50,6 +50,11 @@ sudo cp ./target/*.war /var/lib/tomcat9/webapps/
 ```
 * Refresh the application manager and click on Project1 to deploy.
 
+## Substring match design
+Takes in user input with the SQL tables. Ex of substring design is 
+```html
+like %something%
+```
 
 ## Contribution
 * Araz - Worked on the movieList, singleMovie, and singleStar pages(servlet,js,jdbc,java) and (html/css,MYSQL) files.  Worked shopping list, login, shopping cart, checkout page.
