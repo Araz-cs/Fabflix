@@ -1,0 +1,363 @@
+Inconsistencies @ mains243.xml
+Duplicate entry from mains243.xml: Z0220
+Duplicate entry from mains243.xml: Z0230
+Duplicate entry from mains243.xml: Z0250
+Duplicate entry from mains243.xml: Z0270
+Duplicate entry from mains243.xml: FNm10
+Invalid tag LB9
+Invalid tag HBH10
+Duplicate entry from mains243.xml: OP13
+Duplicate entry from mains243.xml: PaJ2
+Duplicate entry from mains243.xml: MiG7
+Duplicate entry from mains243.xml: VM7
+Invalid tag WS45
+Duplicate entry from mains243.xml: NR1
+Invalid tag AS22
+Invalid tag AS32
+Duplicate entry from mains243.xml: JaS13
+Invalid tag RHd2
+Duplicate entry from mains243.xml: KRu25
+Invalid tag IAv12
+Invalid tag MS0
+Invalid tag MS36
+Invalid tag WiW30
+Invalid tag DLy25
+Duplicate entry from mains243.xml: FOR12
+Duplicate entry from mains243.xml: PAl4
+Duplicate entry from mains243.xml: BLe5
+Duplicate entry from mains243.xml: KaK10
+Invalid tag AEy13
+Error: NIs (Invalid director)
+Error: JeL (Invalid director)
+Duplicate entry from mains243.xml: BS6
+Invalid tag CsS15
+Invalid tag TdC13
+Invalid tag Z9590
+Invalid tag AbK15
+Invalid tag MkJ11
+Invalid tag MJu15
+Error: LMy (Invalid director)
+Duplicate entry from mains243.xml: NtB10
+Error: TFd (Invalid director)
+Error: JSx (Invalid director)
+Error: MFo (Invalid director)
+Inconsistencies for actors63.xml
+Duplicate in actors63.xml Brooke Adams1949
+Duplicate in actors63.xml Mario Adorf1930
+Duplicate in actors63.xml Rati Agnihotri1960
+Duplicate in actors63.xml Anouk Aimee1932
+Duplicate in actors63.xml Edward Albert1951
+Duplicate in actors63.xml Alan Alda1936
+Duplicate in actors63.xml John Alderton1940
+Duplicate in actors63.xml Woody Allen1935
+Duplicate in actors63.xml Richard Anderson1926
+Duplicate in actors63.xml Ursula Andress1936
+Duplicate in actors63.xml Fanny Ardant1949
+Duplicate in actors63.xml Alan Arkin1934
+Duplicate in actors63.xml Lucie Arnaz1951
+Duplicate in actors63.xml Elizabeth Ashley1939
+Duplicate in actors63.xml Fred Astaire1899
+Duplicate in actors63.xml William Atherton1947
+Duplicate in actors63.xml Christopher Atkins1961
+Duplicate in actors63.xml Richard Attenborough1923
+Duplicate in actors63.xml Charles Aznavour1924
+Duplicate in actors63.xml Hank Azaria1964
+Duplicate in actors63.xml Amitabh Bachchan1942
+Duplicate in actors63.xml Josephine Baker1906
+Duplicate in actors63.xml Jill Balcon1925
+Duplicate in actors63.xml William Baldwin1963
+Duplicate in actors63.xml Anne Bancroft1931
+Duplicate in actors63.xml Antonio Banderas1960
+Duplicate in actors63.xml Ellen Barkin1954
+Duplicate in actors63.xml Kim Basinger1953
+Duplicate in actors63.xml Angela Bassett1958
+Duplicate in actors63.xml Ned Beatty1937
+Duplicate in actors63.xml Warren Beatty1937
+Duplicate in actors63.xml John Beck1943
+Duplicate in actors63.xml Harry Belafonte1927
+Duplicate in actors63.xml Tom Bell1933
+Duplicate in actors63.xml Dirk Benedict1945
+Duplicate in actors63.xml Hywel Bennett1944
+Duplicate in actors63.xml Candice Bergen1946
+Duplicate in actors63.xml Ruben Blades1948
+Duplicate in actors63.xml Pat Boone1934
+Duplicate in actors63.xml John Boorman1933
+Duplicate in actors63.xml Tom Bosley1927
+Duplicate in actors63.xml David Bowie1947
+Duplicate in actors63.xml Bruce Boxleitner1950
+Duplicate in actors63.xml Kenneth Branagh1960
+Duplicate in actors63.xml Marlon Brando1924
+Duplicate in actors63.xml Claude Brasseur1936
+Duplicate in actors63.xml Beau Bridges1941
+Duplicate in actors63.xml Jeff Bridges1949
+Duplicate in actors63.xml James Brolin1940
+Duplicate in actors63.xml Albert Brooks1947
+Duplicate in actors63.xml Mel Brooks1926
+Duplicate in actors63.xml Jim Brown1936
+Duplicate in actors63.xml Carol Burnett1933
+Duplicate in actors63.xml Ellen Burstyn1932
+Duplicate in actors63.xml Gary Busey1944
+Duplicate in actors63.xml Nicolas Cage1964
+Duplicate in actors63.xml Michael Caine1933
+Duplicate in actors63.xml Helena Bonham Carter1966
+Duplicate in actors63.xml Veronica Cartwright1949
+Duplicate in actors63.xml Johnny Cash1932
+Duplicate in actors63.xml Seymour Cassel1935
+Duplicate in actors63.xml Phoebe Cates1963
+Duplicate in actors63.xml Adolfo Celi1922
+Duplicate in actors63.xml Stockard Channing1944
+Duplicate in actors63.xml Geraldine Chaplin1944
+Duplicate in actors63.xml Sydney Chaplin1926
+Duplicate in actors63.xml Cher1946
+Duplicate in actors63.xml Julie Christie1940
+Duplicate in actors63.xml John Cleese1939
+Duplicate in actors63.xml Glenn Close1947
+Duplicate in actors63.xml James Coburn1928
+Duplicate in actors63.xml Jeff Conaway1950
+Duplicate in actors63.xml Robert Conrad1935
+Duplicate in actors63.xml Francis Ford Coppola1939
+Duplicate in actors63.xml Roger Corman1926
+Duplicate in actors63.xml Kevin Costner1955
+Duplicate in actors63.xml Clotilde Courau1969
+Duplicate in actors63.xml Tom Courtenay1937
+Duplicate in actors63.xml Ronny Cox1938
+Duplicate in actors63.xml Billy Crystal1948
+Duplicate in actors63.xml Kieran Culkin1982
+Duplicate in actors63.xml Robert Culp1930
+Duplicate in actors63.xml Tim Curry1946
+Duplicate in actors63.xml Jamie Lee Curtis1958
+Duplicate in actors63.xml Roger Daltrey1944
+Duplicate in actors63.xml Kim Darby1947
+Duplicate in actors63.xml James Darren1936
+Duplicate in actors63.xml Danielle Darrieux1917
+Duplicate in actors63.xml Ossie Davis1917
+Duplicate in actors63.xml Julie Delpy1969
+Duplicate in actors63.xml Dom DeLuise1933
+Duplicate in actors63.xml Judi Dench1934
+Duplicate in actors63.xml Catherine Deneuve1943
+Duplicate in actors63.xml Gerard Depardieu1948
+Duplicate in actors63.xml Bruce Dern1936
+Duplicate in actors63.xml Laura Dern1967
+Duplicate in actors63.xml Marlene Dietrich1901
+Duplicate in actors63.xml Phyllis Diller1917
+Duplicate in actors63.xml Matt Dillon1964
+Duplicate in actors63.xml Kirk Douglas1916
+Duplicate in actors63.xml Brad Dourif1950
+Duplicate in actors63.xml James Drury1934
+Duplicate in actors63.xml Faye Dunaway1941
+Duplicate in actors63.xml Griffin Dunne1955
+Duplicate in actors63.xml Robert Duvall1931
+Duplicate in actors63.xml Clint Eastwood1930
+Duplicate in actors63.xml Blake Edwards1922
+Duplicate in actors63.xml Lisa Eichhorn1952
+Duplicate in actors63.xml Hector Elizondo1936
+Duplicate in actors63.xml Sam Elliott1944
+Duplicate in actors63.xml Michael Elphick1946
+Duplicate in actors63.xml Peter Falk1927
+Duplicate in actors63.xml Charles Farrell1901
+Duplicate in actors63.xml Mia Farrow1945
+Duplicate in actors63.xml Sherilyn Fenn1965
+Duplicate in actors63.xml Sally Field1946
+Duplicate in actors63.xml Frank Finlay1926
+Duplicate in actors63.xml Albert Finney1936
+Duplicate in actors63.xml Frances Fisher1952
+Duplicate in actors63.xml Bridget Fonda1964
+Duplicate in actors63.xml Jodie Foster1962
+Duplicate in actors63.xml James Fox1939
+Duplicate in actors63.xml Michael J. Fox1961
+Duplicate in actors63.xml Dominic Frontiere1931
+Duplicate in actors63.xml Greta Garbo1905
+Duplicate in actors63.xml Allen Garfield1939
+Duplicate in actors63.xml Beverly Garland1926
+Duplicate in actors63.xml James Garner1928
+Duplicate in actors63.xml Ben Gazzara1930
+Duplicate in actors63.xml Judy Geeson1948
+Duplicate in actors63.xml Richard Gere1949
+Duplicate in actors63.xml Balthazar Getty1975
+Duplicate in actors63.xml Giancarlo Giannini1942
+Duplicate in actors63.xml Henry Gibson1935
+Duplicate in actors63.xml Annie Girardot1931
+Duplicate in actors63.xml Paul Michael Glaser1943
+Duplicate in actors63.xml Jeff Goldblum1952
+Duplicate in actors63.xml Colin Gordon1911
+Duplicate in actors63.xml Elliott Gould1938
+Duplicate in actors63.xml Harold Gould1923
+Duplicate in actors63.xml Juliette Greco1927
+Duplicate in actors63.xml Graham Greene1904
+Duplicate in actors63.xml Pam Grier1949
+Duplicate in actors63.xml Melanie Griffith1957
+Duplicate in actors63.xml Charles Grodin1935
+Duplicate in actors63.xml Gene Hackman1930
+Duplicate in actors63.xml Harry Hamlin1951
+Duplicate in actors63.xml Tom Hanks1956
+Duplicate in actors63.xml Mark Harmon1951
+Duplicate in actors63.xml Mariette Hartley1940
+Duplicate in actors63.xml Rutger Hauer1944
+Duplicate in actors63.xml Goldie Hawn1945
+Duplicate in actors63.xml John Heard1946
+Duplicate in actors63.xml Mariel Hemingway1961
+Duplicate in actors63.xml David Hemmings1941
+Duplicate in actors63.xml Justin Henry1971
+Duplicate in actors63.xml Bernard Hepton1925
+Duplicate in actors63.xml Dustin Hoffman1937
+Duplicate in actors63.xml Bo Hopkins1942
+Duplicate in actors63.xml Bob Hoskins1942
+Duplicate in actors63.xml Helen Hunt1963
+Duplicate in actors63.xml Holly Hunter1958
+Duplicate in actors63.xml Elizabeth Hurley1965
+Duplicate in actors63.xml John Hurt1940
+Duplicate in actors63.xml William Hurt1950
+Duplicate in actors63.xml Olivia Hussey1951
+Duplicate in actors63.xml Anjelica Huston1951
+Duplicate in actors63.xml Timothy Hutton1960
+Duplicate in actors63.xml Jeremy Irons1948
+Duplicate in actors63.xml Samuel L. Jackson1948
+Duplicate in actors63.xml Derek Jacobi1938
+Duplicate in actors63.xml Elton John1947
+Duplicate in actors63.xml Freddie Jones1927
+Duplicate in actors63.xml Shirley Jones1934
+Duplicate in actors63.xml Tommy Lee Jones1946
+Duplicate in actors63.xml Stacy Keach1941
+Duplicate in actors63.xml Marthe Keller1945
+Duplicate in actors63.xml Gary Kemp1959
+Duplicate in actors63.xml George Kennedy1925
+Duplicate in actors63.xml Margot Kidder1948
+Duplicate in actors63.xml Nicole Kidman1967
+Duplicate in actors63.xml Val Kilmer1959
+Duplicate in actors63.xml Greg Kinnear1963
+Duplicate in actors63.xml Kris Kristofferson1936
+Duplicate in actors63.xml Hardy Kruger1928
+Duplicate in actors63.xml Burt Kwouk1930
+Duplicate in actors63.xml Diane Lane1965
+Duplicate in actors63.xml Jessica Lange1949
+Duplicate in actors63.xml Louise Lasser1939
+Duplicate in actors63.xml John Phillip Law1937
+Duplicate in actors63.xml Cloris Leachman1926
+Duplicate in actors63.xml Robert Loggia1930
+Duplicate in actors63.xml Karina Lombard1969
+Duplicate in actors63.xml Shirley MacLaine1934
+Duplicate in actors63.xml Jena Malone1984
+Duplicate in actors63.xml Patrick MacNee1922
+Duplicate in actors63.xml Jane March1973
+Duplicate in actors63.xml Jane March1973
+Duplicate in actors63.xml James Marshall1967
+Duplicate in actors63.xml Steve Martin1945
+Duplicate in actors63.xml Anna Massey1937
+Duplicate in actors63.xml Chiara Mastroianni1972
+Duplicate in actors63.xml Elaine May1932
+Duplicate in actors63.xml Malcolm McDowell1943
+Duplicate in actors63.xml Ian McShane1942
+Duplicate in actors63.xml Spike Milligan1918
+Duplicate in actors63.xml Ron Moody1924
+Duplicate in actors63.xml Terry Moore1929
+Duplicate in actors63.xml Jeanne Moreau1928
+Duplicate in actors63.xml Rita Moreno1931
+Duplicate in actors63.xml Don Murray1929
+Duplicate in actors63.xml James Naughton1945
+Duplicate in actors63.xml Judd Nelson1959
+Duplicate in actors63.xml Willie Nelson1933
+Duplicate in actors63.xml Paul Newman1925
+Duplicate in actors63.xml Jack Nicholson1937
+Duplicate in actors63.xml Nick Nolte1941
+Duplicate in actors63.xml Kim Novak1933
+Duplicate in actors63.xml Gary Oldman1958
+Duplicate in actors63.xml Per Oscarsson1927
+Duplicate in actors63.xml Peter OToole1932
+Duplicate in actors63.xml Frank Oz1944
+Duplicate in actors63.xml Sarah Jessica Parker1965
+Duplicate in actors63.xml Dolly Parton1946
+Duplicate in actors63.xml Sean Penn1960
+Duplicate in actors63.xml Bernadette Peters1948
+Duplicate in actors63.xml Leslie Phillips1924
+Duplicate in actors63.xml Michel Piccoli1925
+Duplicate in actors63.xml Ronald Pickup1940
+Duplicate in actors63.xml Marie-France Pisier1944
+Duplicate in actors63.xml Joan Plowright1929
+Duplicate in actors63.xml Roman Polanski1933
+Duplicate in actors63.xml Sydney Pollack1934
+Duplicate in actors63.xml Natalie Portman1981
+Duplicate in actors63.xml Micheline Presle1922
+Duplicate in actors63.xml Elvis Presley1935
+Duplicate in actors63.xml Barry Primus1938
+Duplicate in actors63.xml Jonathan Pryce1947
+Duplicate in actors63.xml Anthony Quinn1915
+Duplicate in actors63.xml Ronald Reagan1911
+Duplicate in actors63.xml Lynn Redgrave1943
+Duplicate in actors63.xml Vanessa Redgrave1937
+Duplicate in actors63.xml Roger Rees1944
+Duplicate in actors63.xml Carl Reiner1922
+Duplicate in actors63.xml Burt Reynolds1936
+Duplicate in actors63.xml Don Rickles1926
+Duplicate in actors63.xml Leni Riefenstahl1902
+Duplicate in actors63.xml Diana Rigg1938
+Duplicate in actors63.xml John Ritter1948
+Duplicate in actors63.xml Eric Roberts1956
+Duplicate in actors63.xml Julia Roberts1967
+Duplicate in actors63.xml Jean Rochefort1930
+Duplicate in actors63.xml Mickey Rooney1920
+Duplicate in actors63.xml Kurt Russell1951
+Duplicate in actors63.xml Winona Ryder1971
+Duplicate in actors63.xml Soupy Sales1926
+Duplicate in actors63.xml Peter Sallis1921
+Duplicate in actors63.xml Jennifer Salt1944
+Duplicate in actors63.xml Adam Sandler1966
+Duplicate in actors63.xml Chris Sarandon1942
+Duplicate in actors63.xml Susan Sarandon1946
+Duplicate in actors63.xml Fred Savage1976
+Duplicate in actors63.xml Greta Scacchi1960
+Duplicate in actors63.xml Arnold Schwarzenegger1947
+Duplicate in actors63.xml Hanna Schygulla1943
+Duplicate in actors63.xml Steven Seagal1952
+Duplicate in actors63.xml George Segal1934
+Duplicate in actors63.xml Jane Seymour1951
+Duplicate in actors63.xml Tupac Shakur1971
+Duplicate in actors63.xml Omar Sharif1932
+Duplicate in actors63.xml William Shatner1931
+Duplicate in actors63.xml Martin Sheen1940
+Duplicate in actors63.xml Sam Shepard1943
+Duplicate in actors63.xml Martin Short1950
+Duplicate in actors63.xml Ron Silver1946
+Duplicate in actors63.xml Tom Skerritt1933
+Duplicate in actors63.xml Christian Slater1969
+Duplicate in actors63.xml Lois Smith1930
+Duplicate in actors63.xml Maggie Smith1934
+Duplicate in actors63.xml Paul Sorvino1939
+Duplicate in actors63.xml David Soul1943
+Duplicate in actors63.xml Bud Spencer1929
+Duplicate in actors63.xml Sylvester Stallone1946
+Duplicate in actors63.xml John Standing1934
+Duplicate in actors63.xml Maureen Stapleton1925
+Duplicate in actors63.xml Rod Steiger1925
+Duplicate in actors63.xml Andrew Stevens1955
+Duplicate in actors63.xml Meryl Streep1949
+Duplicate in actors63.xml Donald Sutherland1935
+Duplicate in actors63.xml Dudley Sutton1933
+Duplicate in actors63.xml Bo Svenson1941
+Duplicate in actors63.xml Patrick Swayze1952
+Duplicate in actors63.xml Jack Thompson1940
+Duplicate in actors63.xml Rip Torn1931
+Duplicate in actors63.xml John Travolta1954
+Duplicate in actors63.xml Guinevere Turner1968
+Duplicate in actors63.xml Beverly Tyler1924
+Duplicate in actors63.xml Robert Vaughn1932
+Duplicate in actors63.xml Jon Voight1938
+Duplicate in actors63.xml Lindsay Wagner1949
+Duplicate in actors63.xml Robert Wagner1930
+Duplicate in actors63.xml Christopher Walken1943
+Duplicate in actors63.xml Lesley Ann Warren1946
+Duplicate in actors63.xml Craig Wasson1954
+Duplicate in actors63.xml Sam Waterston1940
+Duplicate in actors63.xml Emily Watson1967
+Duplicate in actors63.xml Sigourney Weaver1949
+Duplicate in actors63.xml Robin Williams1951
+Duplicate in actors63.xml Vanessa Williams1963
+Duplicate in actors63.xml Vanessa Williams1963
+Duplicate in actors63.xml Fred Williamson1938
+Duplicate in actors63.xml Scott Wilson1942
+Duplicate in actors63.xml Kate Winslet1975
+Duplicate in actors63.xml Elijah Wood1981
+Duplicate in actors63.xml Michael York1942
+Inconsistencies @ casts124.xml: 
+Could not parse ClC18
+Could not parse DMl10
+Could not parse H65
