@@ -33,11 +33,11 @@
 * SSH onto AWS instance
 
 ```html
-ec2-3-143-237-60.us-east-2.compute.amazonaws.com
+3.22.241.130
 ```
 * Access tomcat at this link
 ```html
-http://ec2-3-143-237-60.us-east-2.compute.amazonaws.com:8080/manager/html
+https://3.22.241.130:8443/manager/html
 ```
 ## Deploy App
 * Inside the repo that contains the pom.xml, build the war file with the command
