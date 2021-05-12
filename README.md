@@ -4,7 +4,7 @@
 * Project status: Done
 
 ## Video
-#### [Fabflix Video Link](https://www.youtube.com/watch?v=5VGDgMAWDd4)
+#### [Fabflix Video Link](https://tinyurl.com/cs122bvidh)
 
 ## Github/Repo
 * clone the repository inside the `AWS` terminal
