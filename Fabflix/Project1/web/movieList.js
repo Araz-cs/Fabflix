@@ -88,7 +88,7 @@ function handleMovieListResult(resultData) {
         let starName = resultData[i]["sname"].split(", ");
 
         let lenStar = 0;
-        if (starID > 3)
+        if (starID.length > 3)
         {
             lenStar = 3;
         }

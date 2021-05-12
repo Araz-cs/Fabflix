@@ -1,5 +1,10 @@
 function handleGenreResult(resultData)
 {
+    if(resultData[resultData.length - 1]["userRole"] == "employee") {
+        dashboardTable = "#dashboardInfo"
+        let dashboardResult = jQuery(dashboardTable);
+        dashboardResult.append('<a class="nav-link" href="_dashboard.html">Dashboard</a>');
+    }
     let i = 0;
 
     let column = "#genre"

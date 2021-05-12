@@ -56,12 +56,13 @@ public class confirmationPage extends HttpServlet {
                     "FROM sales s JOIN movies m " +
                     "WHERE s.movieId = m.movieID AND s.sID > ? " +
                     "AND s.cID = ? " +
-                    "AND saleDate ='" + df.format(dateOBJ) + "'\n" +
+                    "AND saleDate =? \n" +
                     "ORDER BY s.sID DESC;";
 
             PreparedStatement statement=conn.prepareStatement(salesQuery);
             statement.setInt(1,prevSale);
             statement.setString(2,cID);
+            statement.setString(3,df.format(dateOBJ));
 
             ResultSet rs = statement.executeQuery();
             JsonArray jsonArray = new JsonArray();

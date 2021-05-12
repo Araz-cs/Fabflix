@@ -5,22 +5,35 @@ let login_form = $("#login_form");
  * @param resultDataString jsonObject
  */
 function handleLoginResult(resultDataString) {
-    // let resultDataJson = JSON.parse(resultDataString);
-    //
-    // console.log("handle login response");
-    // console.log(resultDataJson);
-    // console.log(resultDataJson["status"]);
+    let resultDataJson = JSON.parse(resultDataString);
+    console.log(resultDataJson);
+    if(resultDataJson["recaptchaStatus"] === "success") {
+        console.log(resultDataJson["recaptchaStatus"]);
+        console.log("handle login response");
+        console.log(resultDataJson);
+        console.log(resultDataJson["status"]);
 
-    // If login succeeds, it will redirect the user to index.html
-    // if (resultDataJson["status"] === "success") {
-    if (resultDataString.indexOf("success") > 0) {
-        window.location.href = "mainPage.html";
-    } else {
-        // If login fails, the web page will display
-        // error messages on <div> with id "login_error_message"
-        // console.log("show error message");
-        //alert("wrong username or password");
-        $("#login_error_message").text("wrong username or password");
+
+        if (resultDataJson["status"] === "success") {
+            // if (resultDataString.indexOf("success") > 0) {
+            window.location.replace("mainPage.html");
+        } else {
+            // If login fails, the web page will display
+            // error messages on <div> with id "login_error_message"
+            // console.log("show error message");
+            //alert("wrong username or password");
+            $("#login_error_message").text("wrong username or password");
+            // location.reload();
+            alert("Invalid information, try again please!");
+            window.reload(true);
+
+        }
+    }
+    else{
+        // location.reload();
+        alert("reCAPTCHA verification failed, try again please!")
+        window.reload(true);
+
     }
 }
 

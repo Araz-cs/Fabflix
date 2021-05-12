@@ -6,11 +6,22 @@ DROP TABLE IF EXISTS stars_in_movies;
 DROP TABLE IF EXISTS genres_in_movies;
 DROP TABLE IF EXISTS sales;
 DROP TABLE IF EXISTS ratings;
+
 DROP TABLE IF EXISTS movies;
+DROP TABLE IF EXISTS employees;
 DROP TABLE IF EXISTS stars;
 DROP TABLE IF EXISTS genres;
 DROP TABLE IF EXISTS customers;
 DROP TABLE IF EXISTS creditcards;
+
+
+CREATE TABLE employees
+(
+	email varchar(50) PRIMARY KEY,
+    password varchar(20) NOT NULL,
+    fullname varchar(100)
+);
+
 CREATE TABLE movies(
         movieID  varchar(10) NOT NULL DEFAULT '',
         title varchar(100) NOT NULL DEFAULT '',
@@ -92,7 +103,7 @@ CREATE TABLE ratings(
 DROP VIEW IF EXISTS movielist;
 CREATE VIEW movielist AS
 SELECT m.movieID , m.title, m.director, GROUP_CONCAT(distinct g.gNames ORDER BY g.gNames SEPARATOR ', ' ) as genre , m.yearz, FORMAT(IFNULL(rating, 0), 1) as rating,
-    GROUP_CONCAT(distinct sm.id SEPARATOR ", " ) as sid, GROUP_CONCAT(distinct s.name SEPARATOR ", " ) as star
+    GROUP_CONCAT( sm.id SEPARATOR ", " ) as sid, GROUP_CONCAT( s.name SEPARATOR ", " ) as star
     FROM movies as m, genres_in_movies as gm, stars_in_movies as sm 
     JOIN ratings as r
 	JOIN genres as g
@@ -111,5 +122,5 @@ GROUP BY s.id
 ORDER BY COUNT(sim.id) DESC, s.name ASC;
 
 
-
-
+CREATE INDEX starsName ON stars(name);
+CREATE INDEX moviesName ON movies(title, director);

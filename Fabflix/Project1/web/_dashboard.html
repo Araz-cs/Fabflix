@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+
+    <title>Dashboard</title>
+</head>
+<body>
+<nav class="navbar navbar-expand-sm bg-body navbar-light">
+    <a class="navbar-brand" href = "mainPage.html">Fabflix</a>
+    <ul class="navbar-nav">
+        <li class="nav-item">
+            <a class="nav-link navbar-light" href="shoppingCart.html">Cart</a>
+        </li>
+    </ul>
+</nav>
+<h2>Employee Dashboard</h2>
+<form ACTION="#" id="star_keywords" METHOD="post">
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label>Star's Name</label>
+            <input placeholder="Enter Star's Name" name = "star" type="text" class="form-control" id="star" >
+        </div>
+        <div class="form-group col-md-4">
+            <label >Birth Year</label>
+            <input placeholder="Enter Birth Year" name = "birthyear" type="text" class="form-control" id="birthyear" >
+        </div>
+    </div>
+    <input type="hidden" name="action" value="addStar" />
+    <input style = "text-align: center" type="submit"  VALUE="submit" class="btn btn-primary">
+</form>
+<form ACTION="#" id="movie_keywords" METHOD="post">
+
+    <div class="form-row">
+        <div class="form-group col-md-4">
+            <label>Title </label>
+            <input placeholder="Enter Title" name = "title" type="text" class="form-control" >
+        </div>
+        <div class="form-group col-md-4">
+            <label>Year</label>
+            <input placeholder="Enter Birth Year" name = "year" type="text" class="form-control" >
+        </div>
+        <div class="form-group col-md-4">
+            <label>Director</label>
+            <input placeholder="Enter Birth Year" name = "director" type="text" class="form-control">
+        </div>
+        <div class="form-group col-md-4">
+            <label >Star's Name</label>
+            <input placeholder="Enter Star's name" name = "star" type="text" class="form-control" >
+        </div>
+        <div class="form-group col-md-4">
+            <label >Genre's Name</label>
+            <input placeholder="Enter Genre name" name = "genre" type="text" class="form-control" >
+        </div>
+    </div>
+    <input type="hidden" name="action" value="addMovie" />
+
+    <input type="submit"  VALUE="submit" class="btn btn-primary">
+</form>
+
+<table class="table table-dark table-striped ">
+    <thead>
+    <tr>
+        <td>Tables</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+    </thead>
+    <tbody id="database"></tbody>
+</table>
+<!--<div id="database" ></div>-->
+
+<!-- Load jQuery and Bootstrap JS -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+
+<script src="_dashboard.js"></script>
+</body>
+
+
+</html>

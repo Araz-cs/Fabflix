@@ -64,8 +64,8 @@ public class checkoutPage extends HttpServlet {
                 String validThru = "";
 
 
-                Statement creditCardQ = conn.createStatement();
-                Statement salesQ = conn.createStatement();
+//                Statement creditCardQ = conn.createStatement();
+//                Statement salesQ = conn.createStatement();
 
                 String saleQ =
                         "SELECT *\n" +
@@ -73,7 +73,9 @@ public class checkoutPage extends HttpServlet {
                                 "ORDER BY sID DESC\n" +
                                 "LIMIT 1;";
 
-                ResultSet rsSale = salesQ.executeQuery(saleQ);
+
+                PreparedStatement statement= conn.prepareStatement(saleQ);
+                ResultSet rsSale = statement.executeQuery();
                 System.out.println("sID");
                 while(rsSale.next())
                 {
@@ -84,10 +86,13 @@ public class checkoutPage extends HttpServlet {
 
                 String CCardQ = "SELECT * \n" +
                         "FROM creditcards \n" +
-                        "WHERE ccID = '" + cardNum + "'\n" +
-                        "AND expiration = '" + expDate + "';";
+                        "WHERE ccID = ? \n" +
+                        "AND expiration = ?;";
 
-                ResultSet rsCreditCard = creditCardQ.executeQuery(CCardQ);
+                PreparedStatement cStatement= conn.prepareStatement(CCardQ);
+                cStatement.setString(1,cardNum);
+                cStatement.setString(2,expDate);
+                ResultSet rsCreditCard = cStatement.executeQuery();
 
 
                 while (rsCreditCard.next())
@@ -122,8 +127,11 @@ public class checkoutPage extends HttpServlet {
                                 String temp = previousItems.get(i);
                                 int hold = Integer.parseInt(custId);
                                 newSale = "insert into sales (cid, movieId, saleDate)"
-                                        + "values ( '" + hold + "' , '" + temp + "' , '" + df.format(ins) + "')";
+                                        + "values (?, ?, ?)";
                                 PreparedStatement insertRow = conn.prepareStatement(newSale);
+                                insertRow.setInt(1,hold);
+                                insertRow.setString(2,temp);
+                                insertRow.setString(3,df.format(ins));
 
                                 insertRow.executeUpdate();
                                 j++;

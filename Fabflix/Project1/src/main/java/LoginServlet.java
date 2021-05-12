@@ -15,6 +15,7 @@ import java.io.PrintWriter;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import org.jasypt.util.password.StrongPasswordEncryptor;
 
 
 import java.io.*;
@@ -53,65 +54,119 @@ public class LoginServlet extends HttpServlet {
         String gRecaptchaResponse = request.getParameter("g-recaptcha-response");
         System.out.println("gRecaptchaResponse=" + gRecaptchaResponse);
 
-        // Verify reCAPTCHA
-        try {
-            recaptchaVerifyUtils.verify(gRecaptchaResponse);
-        } catch (Exception e) {
-            out.println("<html>");
-            out.println("<head><title>Error</title></head>");
-            out.println("<body>");
-            out.println("<p>recaptcha verification error</p>");
-            out.println("<p>" + e.getMessage() + "</p>");
-            out.println("</body>");
-            out.println("</html>");
 
-            out.close();
-            return;
-        }
 
         String username = request.getParameter("username");
         String password = request.getParameter("password");
 
         try  {
+            // Verify reCAPTCHA
+            try {
+                recaptchaVerifyUtils.verify(gRecaptchaResponse);
+            } catch (Exception e) {
+                JsonObject jsonObject = new JsonObject();
+                jsonObject.addProperty("recaptchaStatus", "fail");
+                out.write(jsonObject.toString());
+                out.close();
+                return;
+            }
 
             Connection conn = dataSource.getConnection();
 
-            //String query = "SELECT * FROM Customers c WHERE c.email="+username+" AND c.cPassword="+password ;
-            String query = "SELECT * FROM Customers c WHERE c.email=? AND c.cPassword=?";
+            //Employees
+            String Equery = "SELECT * FROM employees e WHERE e.email=?";
+            PreparedStatement Estatement = conn.prepareStatement(Equery);
+            Estatement.setString(1, username);
+            ResultSet rse = Estatement.executeQuery();
 
+            //Customers
+            String query = "SELECT * FROM customers c WHERE c.email=?";
             PreparedStatement statement = conn.prepareStatement(query);
-
             statement.setString(1, username);
-            statement.setString(2, password);
-
             ResultSet rs = statement.executeQuery();
+
+
+
             JsonObject jsonObject = new JsonObject();
+//            System.out.println("00000000000000000000000  "+rs.next() + "  00000000000000000000000000\n");
+//            System.out.println("00000000000000000000000  "+rse.next() + "  00000000000000000000000000");
+            boolean flag = false;
             if(rs.next())
             {
-                String id = rs.getString("cid");
-                request.getSession().setAttribute("user", new User(username));
-                request.getSession().setAttribute("customerID", id);
-//                System.out.println("User" + request.getSession().getAttribute("user"));
-                jsonObject.addProperty("status","success");
-                jsonObject.addProperty("message","success");
+                String email = rs.getString("email");
+                String pass = rs.getString("cPassword");
+                jsonObject.addProperty("recaptchaStatus", "success");
+                flag = new StrongPasswordEncryptor().checkPassword(password, pass);
+
+                if (username.equals(email) && flag) {
+                    String id = rs.getString("cid");
+                    request.getSession().setAttribute("user", new User(username));
+                    request.getSession().setAttribute("customerID", id);
+                    request.getSession().setAttribute("userRole", "customer");
+
+                  System.out.println("User" + request.getSession().getAttribute("user"));
+                    jsonObject.addProperty("status", "success");
+                    jsonObject.addProperty("message", "success");
+                }
+                else{
+                    jsonObject.addProperty("status", "fail");
+
+                    if (username.equals(email))
+                        jsonObject.addProperty("message", "Wrong password, please try again.");
+
+                    else
+                        jsonObject.addProperty("message", "User " + username + " does not exist.");
+                }
+            }
+            else if(rse.next())
+            {
+                String email = rse.getString("email");
+                String pass = rse.getString("password");
+                jsonObject.addProperty("recaptchaStatus", "success");
+                flag = new StrongPasswordEncryptor().checkPassword(password, pass);
+
+                if (username.equals(email) && flag) {
+                    String id = null;
+                    request.getSession().setAttribute("user", new User(username));
+                    request.getSession().setAttribute("customerID", id);
+                    request.getSession().setAttribute("userRole", "employee");
+
+                    System.out.println("User" + request.getSession().getAttribute("user"));
+                    jsonObject.addProperty("status", "success");
+                    jsonObject.addProperty("message", "success");
+                }
+                else{
+                    jsonObject.addProperty("status", "fail");
+
+                    if (username.equals(email))
+                        jsonObject.addProperty("message", "Wrong password, please try again.");
+
+                    else
+                        jsonObject.addProperty("message", "User " + username + " does not exist.");
+                }
             }
             else
             {
                 //JsonObject responseJsonObject = new JsonObject();
                 jsonObject.addProperty("status", "fail");
-                jsonObject.addProperty("message", "user" + username + "is not right");
+                jsonObject.addProperty("message", "User " + username + " is not right");
             }
             response.getWriter().write(jsonObject.toString());
 
         }
-        catch (Exception e) {
-            // write error message JSON object to output
+//        catch (SQLException e) {
+//            // write error message JSON object to output
+////            JsonObject jsonObject = new JsonObject();
+////            jsonObject.addProperty("errorMessage", e.getMessage());
+//            e.printStackTrace();
+//
+//            // set response status to 500 (Internal Server Error)
+//
+//        }
+        catch (Exception e){
             JsonObject jsonObject = new JsonObject();
             jsonObject.addProperty("errorMessage", e.getMessage());
-
-
-            // set response status to 500 (Internal Server Error)
-
+            out.write(jsonObject.toString());
         }
 
     }

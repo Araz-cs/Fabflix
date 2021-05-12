@@ -46,9 +46,10 @@ public class mainPage extends HttpServlet {
 
             String query = "SELECT * FROM genres;";
 
-            Statement statement = conn.createStatement();
+            PreparedStatement statement= conn.prepareStatement(query);
 
-            ResultSet rs = statement.executeQuery(query);
+            ResultSet rs = statement.executeQuery();
+
             JsonArray jsonArray = new JsonArray();
 
             while (rs.next())
@@ -64,6 +65,9 @@ public class mainPage extends HttpServlet {
 
                 jsonArray.add(jsonObject);
             }
+            JsonObject object = new JsonObject();
+            object.addProperty("userRole", "" + session.getAttribute("userRole"));
+            jsonArray.add(object);
 
             out.write(jsonArray.toString());
             conn.close();
