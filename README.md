@@ -1,4 +1,4 @@
-#  [Fabflix website](http://ec2-3-143-237-60.us-east-2.compute.amazonaws.com:8080/Project1/login.html)
+#  [Fabflix website](https://3.22.241.130:8443/Project1/login.html)
 
 * Implementation of the Movie List page, Single Star page, and Single Movie page for the FabFlix web application.
 * Project status: Done
@@ -77,7 +77,7 @@ Optimization methods
 * For casts124.xml we added indexes on stars(name) and movies(title,director) since it looked through both.
 * Batch inserts were also used to on casts since there was bulk inserting.
 
-* Inconsitiences can be found [here](https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-57/blob/main/xmlparser/inconsistencies.txt)
+* Inconsitiences can be found [here](https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-57/blob/main/XMLParse/inconsistencies.txt)
 
 ## Contribution
 * Araz - Worked on the movieList, singleMovie, and singleStar pages(servlet,js,jdbc,java) and (html/css,MYSQL) files.  Worked shopping list, login, shopping cart, checkout page. Dashboard. XML
