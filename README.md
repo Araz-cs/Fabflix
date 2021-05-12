@@ -56,12 +56,12 @@ Takes in user input with the SQL tables. Ex of substring design is
 like %something%
 ```
 ## Prepared statements
-[Dashboard](https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-57/blob/main/Fabflix/Project1/src/main/java/Dashboard.java)
-[LoginServlet](https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-57/blob/main/Fabflix/Project1/src/main/java/LoginServlet.java)
-[mainPage](https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-57/blob/main/Fabflix/Project1/src/main/java/mainPage.java)
-[movieList](https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-57/blob/main/Fabflix/Project1/src/main/java/movieList.java)
-[singleMovie](https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-57/blob/main/Fabflix/Project1/src/main/java/singleMovie.java)
-[singleStar](https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-57/blob/main/Fabflix/Project1/src/main/java/singleStar.java)
+*[Dashboard](https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-57/blob/main/Fabflix/Project1/src/main/java/Dashboard.java)
+*[LoginServlet](https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-57/blob/main/Fabflix/Project1/src/main/java/LoginServlet.java)
+*[mainPage](https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-57/blob/main/Fabflix/Project1/src/main/java/mainPage.java)
+*[movieList](https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-57/blob/main/Fabflix/Project1/src/main/java/movieList.java)
+*[singleMovie](https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-57/blob/main/Fabflix/Project1/src/main/java/singleMovie.java)
+*[singleStar](https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-57/blob/main/Fabflix/Project1/src/main/java/singleStar.java)
 
 
 ## Optimization
@@ -76,8 +76,8 @@ After optimization
 ~5:00
 ```
 Optimization methods
--For casts124.xml we added indexes on stars(name) and movies(title,director) since it looked through both.
--Batch inserts were also used to on casts since there was bulk inserting.
+*For casts124.xml we added indexes on stars(name) and movies(title,director) since it looked through both.
+*Batch inserts were also used to on casts since there was bulk inserting.
 
 Inconsitiences can be found [here](https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-57/blob/main/xmlparser/inconsistencies.txt)
 
