@@ -1,0 +1,363 @@
+Inconsistencies in mains
+Duplicate entry found in mains: Z0220
+Duplicate entry found in mains: Z0230
+Duplicate entry found in mains: Z0250
+Duplicate entry found in mains: Z0270
+Duplicate entry found in mains: FNm10
+Invalid tag LB9
+Invalid tag HBH10
+Duplicate entry found in mains: OP13
+Duplicate entry found in mains: PaJ2
+Duplicate entry found in mains: MiG7
+Duplicate entry found in mains: VM7
+Invalid tag WS45
+Duplicate entry found in mains: NR1
+Invalid tag AS22
+Invalid tag AS32
+Duplicate entry found in mains: JaS13
+Invalid tag RHd2
+Duplicate entry found in mains: KRu25
+Invalid tag IAv12
+Invalid tag MS0
+Invalid tag MS36
+Invalid tag WiW30
+Invalid tag DLy25
+Duplicate entry found in mains: FOR12
+Duplicate entry found in mains: PAl4
+Duplicate entry found in mains: BLe5
+Duplicate entry found in mains: KaK10
+Invalid tag AEy13
+Error with director: NIs
+Error with director: JeL
+Duplicate entry found in mains: BS6
+Invalid tag CsS15
+Invalid tag TdC13
+Invalid tag Z9590
+Invalid tag AbK15
+Invalid tag MkJ11
+Invalid tag MJu15
+Error with director: LMy
+Duplicate entry found in mains: NtB10
+Error with director: TFd
+Error with director: JSx
+Error with director: MFo
+Inconsistencies in actors
+Duplicate in actors Brooke Adams1949
+Duplicate in actors Mario Adorf1930
+Duplicate in actors Rati Agnihotri1960
+Duplicate in actors Anouk Aimee1932
+Duplicate in actors Edward Albert1951
+Duplicate in actors Alan Alda1936
+Duplicate in actors John Alderton1940
+Duplicate in actors Woody Allen1935
+Duplicate in actors Richard Anderson1926
+Duplicate in actors Ursula Andress1936
+Duplicate in actors Fanny Ardant1949
+Duplicate in actors Alan Arkin1934
+Duplicate in actors Lucie Arnaz1951
+Duplicate in actors Elizabeth Ashley1939
+Duplicate in actors Fred Astaire1899
+Duplicate in actors William Atherton1947
+Duplicate in actors Christopher Atkins1961
+Duplicate in actors Richard Attenborough1923
+Duplicate in actors Charles Aznavour1924
+Duplicate in actors Hank Azaria1964
+Duplicate in actors Amitabh Bachchan1942
+Duplicate in actors Josephine Baker1906
+Duplicate in actors Jill Balcon1925
+Duplicate in actors William Baldwin1963
+Duplicate in actors Anne Bancroft1931
+Duplicate in actors Antonio Banderas1960
+Duplicate in actors Ellen Barkin1954
+Duplicate in actors Kim Basinger1953
+Duplicate in actors Angela Bassett1958
+Duplicate in actors Ned Beatty1937
+Duplicate in actors Warren Beatty1937
+Duplicate in actors John Beck1943
+Duplicate in actors Harry Belafonte1927
+Duplicate in actors Tom Bell1933
+Duplicate in actors Dirk Benedict1945
+Duplicate in actors Hywel Bennett1944
+Duplicate in actors Candice Bergen1946
+Duplicate in actors Ruben Blades1948
+Duplicate in actors Pat Boone1934
+Duplicate in actors John Boorman1933
+Duplicate in actors Tom Bosley1927
+Duplicate in actors David Bowie1947
+Duplicate in actors Bruce Boxleitner1950
+Duplicate in actors Kenneth Branagh1960
+Duplicate in actors Marlon Brando1924
+Duplicate in actors Claude Brasseur1936
+Duplicate in actors Beau Bridges1941
+Duplicate in actors Jeff Bridges1949
+Duplicate in actors James Brolin1940
+Duplicate in actors Albert Brooks1947
+Duplicate in actors Mel Brooks1926
+Duplicate in actors Jim Brown1936
+Duplicate in actors Carol Burnett1933
+Duplicate in actors Ellen Burstyn1932
+Duplicate in actors Gary Busey1944
+Duplicate in actors Nicolas Cage1964
+Duplicate in actors Michael Caine1933
+Duplicate in actors Helena Bonham Carter1966
+Duplicate in actors Veronica Cartwright1949
+Duplicate in actors Johnny Cash1932
+Duplicate in actors Seymour Cassel1935
+Duplicate in actors Phoebe Cates1963
+Duplicate in actors Adolfo Celi1922
+Duplicate in actors Stockard Channing1944
+Duplicate in actors Geraldine Chaplin1944
+Duplicate in actors Sydney Chaplin1926
+Duplicate in actors Cher1946
+Duplicate in actors Julie Christie1940
+Duplicate in actors John Cleese1939
+Duplicate in actors Glenn Close1947
+Duplicate in actors James Coburn1928
+Duplicate in actors Jeff Conaway1950
+Duplicate in actors Robert Conrad1935
+Duplicate in actors Francis Ford Coppola1939
+Duplicate in actors Roger Corman1926
+Duplicate in actors Kevin Costner1955
+Duplicate in actors Clotilde Courau1969
+Duplicate in actors Tom Courtenay1937
+Duplicate in actors Ronny Cox1938
+Duplicate in actors Billy Crystal1948
+Duplicate in actors Kieran Culkin1982
+Duplicate in actors Robert Culp1930
+Duplicate in actors Tim Curry1946
+Duplicate in actors Jamie Lee Curtis1958
+Duplicate in actors Roger Daltrey1944
+Duplicate in actors Kim Darby1947
+Duplicate in actors James Darren1936
+Duplicate in actors Danielle Darrieux1917
+Duplicate in actors Ossie Davis1917
+Duplicate in actors Julie Delpy1969
+Duplicate in actors Dom DeLuise1933
+Duplicate in actors Judi Dench1934
+Duplicate in actors Catherine Deneuve1943
+Duplicate in actors Gerard Depardieu1948
+Duplicate in actors Bruce Dern1936
+Duplicate in actors Laura Dern1967
+Duplicate in actors Marlene Dietrich1901
+Duplicate in actors Phyllis Diller1917
+Duplicate in actors Matt Dillon1964
+Duplicate in actors Kirk Douglas1916
+Duplicate in actors Brad Dourif1950
+Duplicate in actors James Drury1934
+Duplicate in actors Faye Dunaway1941
+Duplicate in actors Griffin Dunne1955
+Duplicate in actors Robert Duvall1931
+Duplicate in actors Clint Eastwood1930
+Duplicate in actors Blake Edwards1922
+Duplicate in actors Lisa Eichhorn1952
+Duplicate in actors Hector Elizondo1936
+Duplicate in actors Sam Elliott1944
+Duplicate in actors Michael Elphick1946
+Duplicate in actors Peter Falk1927
+Duplicate in actors Charles Farrell1901
+Duplicate in actors Mia Farrow1945
+Duplicate in actors Sherilyn Fenn1965
+Duplicate in actors Sally Field1946
+Duplicate in actors Frank Finlay1926
+Duplicate in actors Albert Finney1936
+Duplicate in actors Frances Fisher1952
+Duplicate in actors Bridget Fonda1964
+Duplicate in actors Jodie Foster1962
+Duplicate in actors James Fox1939
+Duplicate in actors Michael J. Fox1961
+Duplicate in actors Dominic Frontiere1931
+Duplicate in actors Greta Garbo1905
+Duplicate in actors Allen Garfield1939
+Duplicate in actors Beverly Garland1926
+Duplicate in actors James Garner1928
+Duplicate in actors Ben Gazzara1930
+Duplicate in actors Judy Geeson1948
+Duplicate in actors Richard Gere1949
+Duplicate in actors Balthazar Getty1975
+Duplicate in actors Giancarlo Giannini1942
+Duplicate in actors Henry Gibson1935
+Duplicate in actors Annie Girardot1931
+Duplicate in actors Paul Michael Glaser1943
+Duplicate in actors Jeff Goldblum1952
+Duplicate in actors Colin Gordon1911
+Duplicate in actors Elliott Gould1938
+Duplicate in actors Harold Gould1923
+Duplicate in actors Juliette Greco1927
+Duplicate in actors Graham Greene1904
+Duplicate in actors Pam Grier1949
+Duplicate in actors Melanie Griffith1957
+Duplicate in actors Charles Grodin1935
+Duplicate in actors Gene Hackman1930
+Duplicate in actors Harry Hamlin1951
+Duplicate in actors Tom Hanks1956
+Duplicate in actors Mark Harmon1951
+Duplicate in actors Mariette Hartley1940
+Duplicate in actors Rutger Hauer1944
+Duplicate in actors Goldie Hawn1945
+Duplicate in actors John Heard1946
+Duplicate in actors Mariel Hemingway1961
+Duplicate in actors David Hemmings1941
+Duplicate in actors Justin Henry1971
+Duplicate in actors Bernard Hepton1925
+Duplicate in actors Dustin Hoffman1937
+Duplicate in actors Bo Hopkins1942
+Duplicate in actors Bob Hoskins1942
+Duplicate in actors Helen Hunt1963
+Duplicate in actors Holly Hunter1958
+Duplicate in actors Elizabeth Hurley1965
+Duplicate in actors John Hurt1940
+Duplicate in actors William Hurt1950
+Duplicate in actors Olivia Hussey1951
+Duplicate in actors Anjelica Huston1951
+Duplicate in actors Timothy Hutton1960
+Duplicate in actors Jeremy Irons1948
+Duplicate in actors Samuel L. Jackson1948
+Duplicate in actors Derek Jacobi1938
+Duplicate in actors Elton John1947
+Duplicate in actors Freddie Jones1927
+Duplicate in actors Shirley Jones1934
+Duplicate in actors Tommy Lee Jones1946
+Duplicate in actors Stacy Keach1941
+Duplicate in actors Marthe Keller1945
+Duplicate in actors Gary Kemp1959
+Duplicate in actors George Kennedy1925
+Duplicate in actors Margot Kidder1948
+Duplicate in actors Nicole Kidman1967
+Duplicate in actors Val Kilmer1959
+Duplicate in actors Greg Kinnear1963
+Duplicate in actors Kris Kristofferson1936
+Duplicate in actors Hardy Kruger1928
+Duplicate in actors Burt Kwouk1930
+Duplicate in actors Diane Lane1965
+Duplicate in actors Jessica Lange1949
+Duplicate in actors Louise Lasser1939
+Duplicate in actors John Phillip Law1937
+Duplicate in actors Cloris Leachman1926
+Duplicate in actors Robert Loggia1930
+Duplicate in actors Karina Lombard1969
+Duplicate in actors Shirley MacLaine1934
+Duplicate in actors Jena Malone1984
+Duplicate in actors Patrick MacNee1922
+Duplicate in actors Jane March1973
+Duplicate in actors Jane March1973
+Duplicate in actors James Marshall1967
+Duplicate in actors Steve Martin1945
+Duplicate in actors Anna Massey1937
+Duplicate in actors Chiara Mastroianni1972
+Duplicate in actors Elaine May1932
+Duplicate in actors Malcolm McDowell1943
+Duplicate in actors Ian McShane1942
+Duplicate in actors Spike Milligan1918
+Duplicate in actors Ron Moody1924
+Duplicate in actors Terry Moore1929
+Duplicate in actors Jeanne Moreau1928
+Duplicate in actors Rita Moreno1931
+Duplicate in actors Don Murray1929
+Duplicate in actors James Naughton1945
+Duplicate in actors Judd Nelson1959
+Duplicate in actors Willie Nelson1933
+Duplicate in actors Paul Newman1925
+Duplicate in actors Jack Nicholson1937
+Duplicate in actors Nick Nolte1941
+Duplicate in actors Kim Novak1933
+Duplicate in actors Gary Oldman1958
+Duplicate in actors Per Oscarsson1927
+Duplicate in actors Peter OToole1932
+Duplicate in actors Frank Oz1944
+Duplicate in actors Sarah Jessica Parker1965
+Duplicate in actors Dolly Parton1946
+Duplicate in actors Sean Penn1960
+Duplicate in actors Bernadette Peters1948
+Duplicate in actors Leslie Phillips1924
+Duplicate in actors Michel Piccoli1925
+Duplicate in actors Ronald Pickup1940
+Duplicate in actors Marie-France Pisier1944
+Duplicate in actors Joan Plowright1929
+Duplicate in actors Roman Polanski1933
+Duplicate in actors Sydney Pollack1934
+Duplicate in actors Natalie Portman1981
+Duplicate in actors Micheline Presle1922
+Duplicate in actors Elvis Presley1935
+Duplicate in actors Barry Primus1938
+Duplicate in actors Jonathan Pryce1947
+Duplicate in actors Anthony Quinn1915
+Duplicate in actors Ronald Reagan1911
+Duplicate in actors Lynn Redgrave1943
+Duplicate in actors Vanessa Redgrave1937
+Duplicate in actors Roger Rees1944
+Duplicate in actors Carl Reiner1922
+Duplicate in actors Burt Reynolds1936
+Duplicate in actors Don Rickles1926
+Duplicate in actors Leni Riefenstahl1902
+Duplicate in actors Diana Rigg1938
+Duplicate in actors John Ritter1948
+Duplicate in actors Eric Roberts1956
+Duplicate in actors Julia Roberts1967
+Duplicate in actors Jean Rochefort1930
+Duplicate in actors Mickey Rooney1920
+Duplicate in actors Kurt Russell1951
+Duplicate in actors Winona Ryder1971
+Duplicate in actors Soupy Sales1926
+Duplicate in actors Peter Sallis1921
+Duplicate in actors Jennifer Salt1944
+Duplicate in actors Adam Sandler1966
+Duplicate in actors Chris Sarandon1942
+Duplicate in actors Susan Sarandon1946
+Duplicate in actors Fred Savage1976
+Duplicate in actors Greta Scacchi1960
+Duplicate in actors Arnold Schwarzenegger1947
+Duplicate in actors Hanna Schygulla1943
+Duplicate in actors Steven Seagal1952
+Duplicate in actors George Segal1934
+Duplicate in actors Jane Seymour1951
+Duplicate in actors Tupac Shakur1971
+Duplicate in actors Omar Sharif1932
+Duplicate in actors William Shatner1931
+Duplicate in actors Martin Sheen1940
+Duplicate in actors Sam Shepard1943
+Duplicate in actors Martin Short1950
+Duplicate in actors Ron Silver1946
+Duplicate in actors Tom Skerritt1933
+Duplicate in actors Christian Slater1969
+Duplicate in actors Lois Smith1930
+Duplicate in actors Maggie Smith1934
+Duplicate in actors Paul Sorvino1939
+Duplicate in actors David Soul1943
+Duplicate in actors Bud Spencer1929
+Duplicate in actors Sylvester Stallone1946
+Duplicate in actors John Standing1934
+Duplicate in actors Maureen Stapleton1925
+Duplicate in actors Rod Steiger1925
+Duplicate in actors Andrew Stevens1955
+Duplicate in actors Meryl Streep1949
+Duplicate in actors Donald Sutherland1935
+Duplicate in actors Dudley Sutton1933
+Duplicate in actors Bo Svenson1941
+Duplicate in actors Patrick Swayze1952
+Duplicate in actors Jack Thompson1940
+Duplicate in actors Rip Torn1931
+Duplicate in actors John Travolta1954
+Duplicate in actors Guinevere Turner1968
+Duplicate in actors Beverly Tyler1924
+Duplicate in actors Robert Vaughn1932
+Duplicate in actors Jon Voight1938
+Duplicate in actors Lindsay Wagner1949
+Duplicate in actors Robert Wagner1930
+Duplicate in actors Christopher Walken1943
+Duplicate in actors Lesley Ann Warren1946
+Duplicate in actors Craig Wasson1954
+Duplicate in actors Sam Waterston1940
+Duplicate in actors Emily Watson1967
+Duplicate in actors Sigourney Weaver1949
+Duplicate in actors Robin Williams1951
+Duplicate in actors Vanessa Williams1963
+Duplicate in actors Vanessa Williams1963
+Duplicate in actors Fred Williamson1938
+Duplicate in actors Scott Wilson1942
+Duplicate in actors Kate Winslet1975
+Duplicate in actors Elijah Wood1981
+Duplicate in actors Michael York1942
+Inconsistencies in casts: 
+Could not parse ClC18
+Could not parse DMl10
+Could not parse H65

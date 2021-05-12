@@ -122,5 +122,6 @@ GROUP BY s.id
 ORDER BY COUNT(sim.id) DESC, s.name ASC;
 
 
-CREATE INDEX starsName ON stars(name);
-CREATE INDEX moviesName ON movies(title, director);
+
+CREATE INDEX starN ON stars(name);
+CREATE INDEX moviesN ON movies(title, director);
