@@ -65,8 +65,6 @@ like %something%
 
 
 ## Optimization
-We did the XML parser but does not function on AWS.
-
 XMLParser before optimization
 ```html
 ~6:00
