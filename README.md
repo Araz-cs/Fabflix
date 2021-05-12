@@ -4,7 +4,7 @@
 * Project status: Done
 
 ## Video
-#### [Fabflix Video Link](https://tinyurl.com/cs122bvidh)
+#### [Fabflix Video Link](https://youtu.be/TPeWil97_QE)
 
 ## Github/Repo
 * clone the repository inside the `AWS` terminal
@@ -67,7 +67,7 @@ like %something%
 ## Optimization
 XMLParser before optimization
 ```html
-~6:00
+~7:00
 ```
 After optimization
 ```html
