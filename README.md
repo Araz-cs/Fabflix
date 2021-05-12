@@ -5,6 +5,7 @@
 
 ## Video
 #### [Fabflix Video Link](https://youtu.be/TPeWil97_QE)
+If link above does not work try this [link](https://tinyurl.com/cs122bvidh)
 
 ## Github/Repo
 * clone the repository inside the `AWS` terminal
