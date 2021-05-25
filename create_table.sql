@@ -27,7 +27,8 @@ CREATE TABLE movies(
         title varchar(100) NOT NULL DEFAULT '',
         yearz int(4) NOT NULL ,
         director varchar(100) NOT NULL DEFAULT '',
-        PRIMARY KEY(movieID)
+        PRIMARY KEY(movieID),
+        FULLTEXT(title)
 );
 
 CREATE TABLE stars(
@@ -100,18 +101,45 @@ CREATE TABLE ratings(
 	FOREIGN KEY(movieID) REFERENCES movies(movieID)
 );
 
+
+
+DROP VIEW IF EXISTS moviegenre;
+CREATE VIEW moviegenre AS
+    select gm.movieID, GROUP_CONCAT(distinct g.gNames ORDER BY g.gNames SEPARATOR ', ' ) as genre
+    from genres_in_movies as gm LEFT JOIN genres as g
+    on gm.gID = g.gID
+    GROUP BY gm.movieID;
+
+DROP VIEW IF EXISTS moviestar;
+CREATE VIEW moviestar AS
+    SELECT sm.movieID, GROUP_CONCAT(sm.id SEPARATOR ", " ) as sid, GROUP_CONCAT(s.name SEPARATOR ", " ) as star
+    FROM stars_in_movies as sm LEFT JOIN stars as s
+    on sm.id = s.id
+    GROUP BY sm.movieID;
+
 DROP VIEW IF EXISTS movielist;
 CREATE VIEW movielist AS
-SELECT m.movieID , m.title, m.director, GROUP_CONCAT(distinct g.gNames ORDER BY g.gNames SEPARATOR ', ' ) as genre , m.yearz, FORMAT(IFNULL(rating, 0), 1) as rating,
-    GROUP_CONCAT( sm.id SEPARATOR ", " ) as sid, GROUP_CONCAT( s.name SEPARATOR ", " ) as star
-    FROM movies as m, genres_in_movies as gm, stars_in_movies as sm 
-    JOIN ratings as r
-	JOIN genres as g
-    JOIN stars as s
-	WHERE r.movieID = gm.movieID AND sm.movieID = r.movieID
-    AND gm.gID = g.gID AND sm.id = s.id AND  m.movieID = r.movieId
-    group by movieID;
+    SELECT m.movieID, m.title, m.director, g.genre, m.yearz,  FORMAT(IFNULL(r.rating, 0),1) as rating, s.sid, s.star
+    FROM movies as m 
+    LEFT JOIN ratings as r
+    ON m.movieID = r.movieID
+    LEFT JOIN moviegenre as g 
+    ON m.movieID = g.movieID
+    LEFT JOIN moviestar as s
+    ON s.movieID = m.movieID;
     
+-- DROP VIEW IF EXISTS movielist;
+-- CREATE VIEW movielist AS
+-- SELECT m.movieID , m.title, m.director, GROUP_CONCAT(distinct g.gNames ORDER BY g.gNames SEPARATOR ', ' ) as genre , m.yearz, FORMAT(IFNULL(rating, 0), 1) as rating,
+--     GROUP_CONCAT( sm.id SEPARATOR ", " ) as sid, GROUP_CONCAT( s.name SEPARATOR ", " ) as star
+--     FROM movies as m, genres_in_movies as gm, stars_in_movies as sm 
+--     INNER JOIN ratings as r
+-- 	INNER JOIN genres as g
+--     INNER JOIN stars as s
+-- 	WHERE r.movieID = gm.movieID AND sm.movieID = r.movieID
+--     AND gm.gID = g.gID AND sm.id = s.id AND  m.movieID = r.movieId
+--     group by movieID;
+--     
     
 DROP VIEW IF EXISTS count_Stars_in_movies;
 CREATE VIEW count_Stars_in_movies AS
