@@ -1,4 +1,4 @@
-let data = window.localStorage;
+
 
 function handleGenreResult(resultData)
 {
@@ -65,7 +65,7 @@ function handleLookup(query, doneCallback) {
     // with the query data
     query = query.toLowerCase();
 
-    if(data.getItem(query) == null) {
+    if(window.localStorage.getItem(query) == null) {
         console.log("sending AJAX request to backend suggestion Servlet")
 
 
@@ -96,7 +96,7 @@ function handleLookupAjaxSuccess(data, query, doneCallback) {
     console.log("lookup ajax successful")
 
     // parse the string into JSON
-    data.setItem(query, data);
+    window.localStorage.setItem(query, data);
     var jsonData = JSON.parse(data);
     console.log(jsonData)
 
@@ -112,7 +112,7 @@ function handlePrevResult(query, doneCallback)
 {
     console.log("Data request to LocalStorage successful: ");
     // console.log(storage.getItem(query));
-    let jsonData = JSON.parse(data.getItem(query));
+    let jsonData = JSON.parse(window.localStorage.getItem(query));
 
     doneCallback( { suggestions: jsonData } );
 }
