@@ -1,11 +1,9 @@
-#  [Fabflix website](https://3.22.241.130:8443/Project1/login.html)
-
+#  [Fabflix website](https://ec2-3-22-241-130.us-east-2.compute.amazonaws.com:8443/Project1/login.html)
 * Implementation of the Movie List page, Single Star page, and Single Movie page for the FabFlix web application.
 * Project status: Done
 
 ## Video
-#### [Fabflix Video Link](https://youtu.be/TPeWil97_QE)
-If link above does not work try this [link](https://tinyurl.com/cs122bvidh)
+#### [Fabflix Video Link](https://youtu.be/do8-hbe3_6Q)
 
 ## Github/Repo
 * clone the repository inside the `AWS` terminal
@@ -51,6 +49,12 @@ sudo cp ./target/*.war /var/lib/tomcat9/webapps/
 ```
 * Refresh the application manager and click on Project1 to deploy.
 
+## Deploy Android app
+* Import cs122b-spring21-project4-android-example on android studio as gradle project.
+* Match url to aws instance url (Already done for the current instance)
+* In AVD configurations, setup emulator to Pixel 4a API 30
+* Run emulator
+
 ## Substring match design
 Takes in user input with the SQL tables. Ex of substring design is 
 ```html
@@ -81,5 +85,5 @@ Optimization methods
 * Inconsitiences can be found [here](https://github.com/UCI-Chenli-teaching/cs122b-spring21-team-57/blob/main/XMLParse/inconsistencies.txt)
 
 ## Contribution
-* Araz - Worked on the movieList, singleMovie, and singleStar pages(servlet,js,jdbc,java) and (html/css,MYSQL) files.  Worked shopping list, login, shopping cart, checkout page. Dashboard. XML
-* Harman- Worked on the movieList, singleMovie, and singleStar pages(servlet,js,jdbc,java) and (html/css,MYSQL) files. Worked shopping list, login, shopping cart, checkout page. Dashboard. XML
+* Araz - Worked on the movieList, singleMovie, and singleStar pages(servlet,js,jdbc,java) and (html/css,MYSQL) files.  Worked shopping list, login, shopping cart, checkout page. Dashboard. XML. Updating for fulltext search and autocomplete. Android App
+* Harman- Worked on the movieList, singleMovie, and singleStar pages(servlet,js,jdbc,java) and (html/css,MYSQL) files. Worked shopping list, login, shopping cart, checkout page. Dashboard. XML. Updating for fulltext search and autocomplete. Android App
