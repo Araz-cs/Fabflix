@@ -78,3 +78,32 @@ ol li::before {
 ol ol li::before {
     background: darkorchid;
 }
+
+.autocomplete-suggestions { border: 1px solid #999; background: darkslategrey; overflow: auto; }
+.autocomplete-suggestion { padding: 2px 5px; white-space: nowrap; overflow: hidden; }
+.autocomplete-selected { background: darkcyan; }
+.autocomplete-suggestions strong { font-weight: normal; color: #3399FF; }
+.autocomplete-group { padding: 2px 5px; }
+.autocomplete-group strong { display: block; border-bottom: 1px solid #000; }
+
+.container {
+    height: 50%;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.autocomplete-searchbox {
+    height: 50px;
+    width: 600px;
+
+}
+
+/*input:-webkit-autofill,*/
+/*textarea:-webkit-autofill,*/
+/*select:-webkit-autofill {*/
+/*    -webkit-box-shadow: 0 0 0 1000px #1b1b1b inset !important;*/
+/*    -webkit-text-fill-color: blue !important;*/
+/*}*/

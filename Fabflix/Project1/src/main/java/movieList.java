@@ -67,38 +67,52 @@ public class movieList extends HttpServlet {
         try (Connection conn = dataSource.getConnection())
         {
             String TQ = "";
-
+            String tokenizer = "";
             if(year.isEmpty())
             {
                 year = "%%";
             }
 
-            if(title.equals("@"))
-            {
-                TQ = "regexp '^[^a-z0-9A-Z]'";
+            if(title.equals("") || title.isEmpty()) {
+                title = "%%";
+                TQ = "`title` LIKE ?";
             }
-            else if(title.indexOf('<') != -1)
-            {
+            else if(title.indexOf('<') != -1) {
                 title = title.replace('<', '%');
-                TQ = "LIKE ?";
+                TQ = "`title` LIKE ?";
             }
-            else
-            {
-                title = "%" + title + "%";
-                TQ = "LIKE ?";
+            else if (title.equals("@")) {
+                TQ = "`title` regexp '^[^a-z0-9A-Z]'";
             }
+            else {
+
+
+                String[] word = title.split(" ");
+                int i = 0;
+                while ( i < word.length) {
+                    tokenizer += "+" + word[i] + "*";
+
+                    if (i < word.length - 1)
+                        tokenizer += " ";
+                    i++;
+                }
+
+                title = tokenizer;
+                TQ = "MATCH(`title`) AGAINST( ? IN BOOLEAN MODE)";
+            }
+
             int offset = (Integer.parseInt(page) - 1) * Integer.parseInt(countStr);
             String query = "SELECT *, found_rows() AS 'count' " +
                     "FROM `movielist`" +
                     "WHERE `genre` LIKE ? " +
-                    "AND `title` " + TQ +" " +
+                    "AND " + TQ +" " +
                     "AND `director` LIKE ? " +
                     "AND `star` LIKE ? " +
                     "AND `yearz` LIKE ? " +
                     "ORDER BY " + s1 +  ", " + s2 + " " +
                     "LIMIT " + Integer.parseInt(countStr) +" " +
                     "OFFSET " + offset;
-            System.out.println("offset:"+offset);
+//            System.out.println("offset:"+offset);
             PreparedStatement statement = conn.prepareStatement(query);
 
 
@@ -116,7 +130,7 @@ public class movieList extends HttpServlet {
                 statement.setString(3 , "%" + director + "%");
                 statement.setString(4 , "%" + star + "%");
                 statement.setString(5 ,  year );
-            };
+            }
 
             ResultSet rs = statement.executeQuery();
 
@@ -192,5 +206,6 @@ public class movieList extends HttpServlet {
             sortOrder = "title DESC";
         return sortOrder;
     }
+
 }
 

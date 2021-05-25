@@ -61,16 +61,18 @@ public class LoginServlet extends HttpServlet {
 
         try  {
             // Verify reCAPTCHA
-            try {
-                recaptchaVerifyUtils.verify(gRecaptchaResponse);
-            } catch (Exception e) {
-                JsonObject jsonObject = new JsonObject();
-                jsonObject.addProperty("recaptchaStatus", "fail");
-                out.write(jsonObject.toString());
-                out.close();
-                return;
+            // check if we in android or web to do recaptcha
+            if(!gRecaptchaResponse.equals("android")) {
+                try {
+                    recaptchaVerifyUtils.verify(gRecaptchaResponse);
+                } catch (Exception e) {
+                    JsonObject jsonObject = new JsonObject();
+                    jsonObject.addProperty("recaptchaStatus", "fail");
+                    out.write(jsonObject.toString());
+                    out.close();
+                    return;
+                }
             }
-
             Connection conn = dataSource.getConnection();
 
             //Employees
