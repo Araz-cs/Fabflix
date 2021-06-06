@@ -3,7 +3,7 @@
     
     - #### Names: Harman Reehal, Araz Sultanian
     
-    - #### Project 5 Video Demo Link:
+    - #### Project 5 Video Demo Link: https://www.youtube.com/watch?v=InQAt_aiZUw
 
     - #### Instruction of deployment:
 * clone the repository inside the `AWS` terminal
