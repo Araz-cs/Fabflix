@@ -72,7 +72,7 @@ sudo cp ./target/*.war /var/lib/tomcat9/webapps/
     - #### The way connection pooling is utilized in the fabflix code is by allowing seperate requests to use the same connection in the backend. Connection pooling maintains connections that any new request may create. These requests will recycle previous connections to the database. For example, if a query is sent and it is already an exisiting connection, the connection pool will return the existing connection. If there is not an exisiting connection then it will add it to the pool.
     
     - #### Explain how Connection Pooling works with two backend SQL.
-    - #### All read/wrtie requests will be sent to the master instance, meaning the existing serrvlets weill work the same way as if it was deployed on a single instance. The connection pooling is not shared between the master/slave. Read requests will be sent to load balancer which will determine where they will end up in the Master or Slave. If a read request is sent it will check the instance for an existing connection and if it is not there then a new connection will be added to the connection pool.
+    - #### All read/wrtie requests will be sent to the master instance, meaning the existing servlets weill work the same way as if it was deployed on a single instance. The connection pooling is not shared between the master/slave. Read requests will be sent to load balancer which will determine where they will end up in the Master or Slave. If a read request is sent it will check the instance for an existing connection and if it is not there then a new connection will be added to the connection pool.
     
 
 - # Master/Slave
