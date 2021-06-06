@@ -50,8 +50,8 @@ sudo cp ./target/*.war /var/lib/tomcat9/webapps/
 * Run emulator
 
  - #### Collaborations and Work Distribution:
-     * Araz - Worked on the movieList, singleMovie, and singleStar pages(servlet,js,jdbc,java) and (html/css,MYSQL) files.  Worked shopping list, login, shopping cart, checkout page. Dashboard. XML. Updating for fulltext search and autocomplete. Android App
-     * Harman- Worked on the movieList, singleMovie, and singleStar pages(servlet,js,jdbc,java) and (html/css,MYSQL) files. Worked shopping list, login, shopping cart, checkout page. Dashboard. XML. Updating for fulltext search and autocomplete. Android App
+     * Araz - Worked on the movieList, singleMovie, and singleStar pages(servlet,js,jdbc,java) and (html/css,MYSQL) files.  Worked shopping list, login, shopping cart, checkout page. Dashboard. XML. Updating for fulltext search and autocomplete. Android App. Connection pooling. Master/Slave, GCP.
+     * Harman- Worked on the movieList, singleMovie, and singleStar pages(servlet,js,jdbc,java) and (html/css,MYSQL) files. Worked shopping list, login, shopping cart, checkout page. Dashboard. XML. Updating for fulltext search and autocomplete. Android App. Connection pooling. Master/Slave.
 
 
 - # Connection Pooling
