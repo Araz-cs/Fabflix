@@ -6,6 +6,17 @@
     - #### Project 5 Video Demo Link: https://www.youtube.com/watch?v=InQAt_aiZUw
 
     - #### Instruction of deployment:
+    ## MYSQL & Tomcat Login Info
+1. **Mysql**
+```
+ Username = mytestuser
+ Password = My6$Password
+```
+2. **Tomcat**
+```
+ Username = tomcat
+ Password = 123tomcat
+```
 * clone the repository inside the `AWS` terminal
 
 ```html
